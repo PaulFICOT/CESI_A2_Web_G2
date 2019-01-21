@@ -8,7 +8,6 @@
 
 CREATE DATABASE dbbde;
 
-
 #------------------------------------------------------------
 # Table: Products
 #------------------------------------------------------------
@@ -62,12 +61,17 @@ CREATE TABLE Events(
         Title_event       Varchar (255) NOT NULL ,
         Description_event Varchar (255) NOT NULL ,
         Comment_event     Varchar (255) ,
-        Approval          Bool NOT NULL ,
+        Approval_event    Bool NOT NULL ,
         Date_event        Date NOT NULL ,
-        Id_user           Int NOT NULL
+        Recurrent         Bool NOT NULL ,
+        Price_event       DECIMAL (15,3)  NOT NULL ,
+        Voted_event       Bool NOT NULL ,
+        Id_user           Int NOT NULL ,
+        Id_user_Users     Int NOT NULL
 	,CONSTRAINT Events_PK PRIMARY KEY (Id_event)
 
 	,CONSTRAINT Events_Users_FK FOREIGN KEY (Id_user) REFERENCES Users(Id_user)
+	,CONSTRAINT Events_Users0_FK FOREIGN KEY (Id_user_Users) REFERENCES Users(Id_user)
 )ENGINE=InnoDB;
 
 
@@ -78,10 +82,13 @@ CREATE TABLE Events(
 CREATE TABLE Photos(
         Id_photo   Int  Auto_increment  NOT NULL ,
         Photo_name Varchar (255) ,
+        Is_public  Bool NOT NULL ,
+        Id_user    Int ,
         Id_event   Int NOT NULL
 	,CONSTRAINT Photos_PK PRIMARY KEY (Id_photo)
 
-	,CONSTRAINT Photos_Events_FK FOREIGN KEY (Id_event) REFERENCES Events(Id_event)
+	,CONSTRAINT Photos_Users_FK FOREIGN KEY (Id_user) REFERENCES Users(Id_user)
+	,CONSTRAINT Photos_Events0_FK FOREIGN KEY (Id_event) REFERENCES Events(Id_event)
 )ENGINE=InnoDB;
 
 
@@ -108,40 +115,12 @@ CREATE TABLE Orders(
 CREATE TABLE Comments(
         Id_comment Int  Auto_increment  NOT NULL ,
         Comment    Varchar (255) ,
-        Id_photo   Int NOT NULL
+        Id_photo   Int NOT NULL ,
+        Id_user    Int NOT NULL
 	,CONSTRAINT Comments_PK PRIMARY KEY (Id_comment)
 
 	,CONSTRAINT Comments_Photos_FK FOREIGN KEY (Id_photo) REFERENCES Photos(Id_photo)
-)ENGINE=InnoDB;
-
-
-#------------------------------------------------------------
-# Table: Ideabox
-#------------------------------------------------------------
-
-CREATE TABLE Ideabox(
-        Id_idea          Int  Auto_increment  NOT NULL ,
-        Title_idea       Varchar (255) NOT NULL ,
-        Description_idea Varchar (255) ,
-        Approval         Bool NOT NULL ,
-        Id_user          Int NOT NULL
-	,CONSTRAINT Ideabox_PK PRIMARY KEY (Id_idea)
-
-	,CONSTRAINT Ideabox_Users_FK FOREIGN KEY (Id_user) REFERENCES Users(Id_user)
-)ENGINE=InnoDB;
-
-
-#------------------------------------------------------------
-# Table: Likes
-#------------------------------------------------------------
-
-CREATE TABLE Likes(
-        Id_like  Int  Auto_increment  NOT NULL ,
-        Nbr_like Int ,
-        Id_user  Int NOT NULL
-	,CONSTRAINT Likes_PK PRIMARY KEY (Id_like)
-
-	,CONSTRAINT Likes_Users_FK FOREIGN KEY (Id_user) REFERENCES Users(Id_user)
+	,CONSTRAINT Comments_Users0_FK FOREIGN KEY (Id_user) REFERENCES Users(Id_user)
 )ENGINE=InnoDB;
 
 
@@ -158,3 +137,16 @@ CREATE TABLE Contains(
 	,CONSTRAINT Contains_Products0_FK FOREIGN KEY (Id_product) REFERENCES Products(Id_product)
 )ENGINE=InnoDB;
 
+
+#------------------------------------------------------------
+# Table: Sign_in
+#------------------------------------------------------------
+
+CREATE TABLE Sign_in(
+        Id_event Int NOT NULL ,
+        Id_user  Int NOT NULL
+	,CONSTRAINT Sign_in_PK PRIMARY KEY (Id_event,Id_user)
+
+	,CONSTRAINT Sign_in_Events_FK FOREIGN KEY (Id_event) REFERENCES Events(Id_event)
+	,CONSTRAINT Sign_in_Users0_FK FOREIGN KEY (Id_user) REFERENCES Users(Id_user)
+)ENGINE=InnoDB;
