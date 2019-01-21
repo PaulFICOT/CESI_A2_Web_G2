@@ -1,5 +1,5 @@
 #------------------------------------------------------------
-#        Script MySQL
+#        Script MySQL G2 FICOT SAUVAGE LAMBEC DESRAMAUT
 #------------------------------------------------------------
 
 #--------------------------------------------------------------------------------------------------
@@ -8,20 +8,6 @@
 
 CREATE DATABASE dbbde;
 
-#------------------------------------------------------------
-# Table: Products
-#------------------------------------------------------------
-
-CREATE TABLE Products(
-        Id_product          Int  Auto_increment  NOT NULL ,
-        Name_product        Varchar (50) NOT NULL ,
-        Price_product       DECIMAL (15,3)  NOT NULL ,
-        Description_product Varchar (255) ,
-        Sold_product        Int NOT NULL ,
-        Stock_product       Smallint NOT NULL
-	,CONSTRAINT Products_PK PRIMARY KEY (Id_product)
-)ENGINE=InnoDB;
-
 
 #------------------------------------------------------------
 # Table: Centers
@@ -29,7 +15,7 @@ CREATE TABLE Products(
 
 CREATE TABLE Centers(
         Id_center   Int  Auto_increment  NOT NULL ,
-        Name_center Varchar (50) NOT NULL
+        Center_name Varchar (50) NOT NULL
 	,CONSTRAINT Centers_PK PRIMARY KEY (Id_center)
 )ENGINE=InnoDB;
 
@@ -39,13 +25,13 @@ CREATE TABLE Centers(
 #------------------------------------------------------------
 
 CREATE TABLE Users(
-        Id_user   Int  Auto_increment  NOT NULL ,
-        Firstname Varchar (50) NOT NULL ,
-        Lastname  Varchar (50) NOT NULL ,
-        Mail      Varchar (50) NOT NULL ,
-        Password  Varchar (16) NOT NULL ,
-        Status    Varchar (10) NOT NULL ,
-        Id_center Int NOT NULL
+        Id_user        Int  Auto_increment  NOT NULL ,
+        User_firstname Varchar (50) NOT NULL ,
+        User_lastname  Varchar (50) NOT NULL ,
+        User_mail      Varchar (50) NOT NULL ,
+        User_password  Varchar (20) NOT NULL ,
+        User_status    Varchar (10) NOT NULL ,
+        Id_center      Int NOT NULL
 	,CONSTRAINT Users_PK PRIMARY KEY (Id_user)
 
 	,CONSTRAINT Users_Centers_FK FOREIGN KEY (Id_center) REFERENCES Centers(Id_center)
@@ -58,14 +44,15 @@ CREATE TABLE Users(
 
 CREATE TABLE Events(
         Id_event          Int  Auto_increment  NOT NULL ,
-        Title_event       Varchar (255) NOT NULL ,
-        Description_event Varchar (255) NOT NULL ,
-        Comment_event     Varchar (255) ,
-        Approval_event    Bool NOT NULL ,
-        Date_event        Date NOT NULL ,
-        Recurrent         Bool NOT NULL ,
-        Price_event       DECIMAL (15,3)  NOT NULL ,
-        Voted_event       Bool NOT NULL ,
+        Event_title       Varchar (255) NOT NULL ,
+        Event_description Varchar (255) NOT NULL ,
+        Event_comment     Varchar (255) ,
+        Event_approval    Bool NOT NULL ,
+        Event_date        Date NOT NULL ,
+        Event_recurrence  Bool NOT NULL ,
+        Event_price       DECIMAL (15,3)  NOT NULL ,
+        Event_voted       Bool NOT NULL ,
+        Event_period      Varchar (63) ,
         Id_user           Int NOT NULL ,
         Id_user_Users     Int NOT NULL
 	,CONSTRAINT Events_PK PRIMARY KEY (Id_event)
@@ -80,11 +67,11 @@ CREATE TABLE Events(
 #------------------------------------------------------------
 
 CREATE TABLE Photos(
-        Id_photo   Int  Auto_increment  NOT NULL ,
-        Photo_name Varchar (255) ,
-        Is_public  Bool NOT NULL ,
-        Id_user    Int ,
-        Id_event   Int NOT NULL
+        Id_photo        Int  Auto_increment  NOT NULL ,
+        Photo_name      Varchar (255) ,
+        Photo_is_public Bool NOT NULL ,
+        Id_user         Int ,
+        Id_event        Int NOT NULL
 	,CONSTRAINT Photos_PK PRIMARY KEY (Id_photo)
 
 	,CONSTRAINT Photos_Users_FK FOREIGN KEY (Id_user) REFERENCES Users(Id_user)
@@ -97,11 +84,11 @@ CREATE TABLE Photos(
 #------------------------------------------------------------
 
 CREATE TABLE Orders(
-        Id_order    Int  Auto_increment  NOT NULL ,
-        Date_order  Date NOT NULL ,
-        Price_order DECIMAL (15,3)  NOT NULL ,
-        Amount      Smallint NOT NULL ,
-        Id_user     Int NOT NULL
+        Id_order     Int  Auto_increment  NOT NULL ,
+        Order_date   Date NOT NULL ,
+        Order_price  DECIMAL (15,3)  NOT NULL ,
+        Order_Amount Int NOT NULL ,
+        Id_user      Int NOT NULL
 	,CONSTRAINT Orders_PK PRIMARY KEY (Id_order)
 
 	,CONSTRAINT Orders_Users_FK FOREIGN KEY (Id_user) REFERENCES Users(Id_user)
@@ -109,18 +96,32 @@ CREATE TABLE Orders(
 
 
 #------------------------------------------------------------
-# Table: Comments
+# Table: Category
 #------------------------------------------------------------
 
-CREATE TABLE Comments(
-        Id_comment Int  Auto_increment  NOT NULL ,
-        Comment    Varchar (255) ,
-        Id_photo   Int NOT NULL ,
-        Id_user    Int NOT NULL
-	,CONSTRAINT Comments_PK PRIMARY KEY (Id_comment)
+CREATE TABLE Category(
+        Id_category   Int  Auto_increment  NOT NULL ,
+        Category_type Varchar (63) NOT NULL
+	,CONSTRAINT Category_PK PRIMARY KEY (Id_category)
+)ENGINE=InnoDB;
 
-	,CONSTRAINT Comments_Photos_FK FOREIGN KEY (Id_photo) REFERENCES Photos(Id_photo)
-	,CONSTRAINT Comments_Users0_FK FOREIGN KEY (Id_user) REFERENCES Users(Id_user)
+
+#------------------------------------------------------------
+# Table: Products
+#------------------------------------------------------------
+
+CREATE TABLE Products(
+        Id_product          Int  Auto_increment  NOT NULL ,
+        Product_name        Varchar (50) NOT NULL ,
+        Product_price       DECIMAL (15,3)  NOT NULL ,
+        Product_description Varchar (255) ,
+        Product_nbr_sold    Int NOT NULL ,
+        Product_stock       Int NOT NULL ,
+        Product_path_image  Varchar (255) NOT NULL ,
+        Id_category         Int NOT NULL
+	,CONSTRAINT Products_PK PRIMARY KEY (Id_product)
+
+	,CONSTRAINT Products_Category_FK FOREIGN KEY (Id_category) REFERENCES Category(Id_category)
 )ENGINE=InnoDB;
 
 
@@ -135,6 +136,20 @@ CREATE TABLE Contains(
 
 	,CONSTRAINT Contains_Orders_FK FOREIGN KEY (Id_order) REFERENCES Orders(Id_order)
 	,CONSTRAINT Contains_Products0_FK FOREIGN KEY (Id_product) REFERENCES Products(Id_product)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Comment
+#------------------------------------------------------------
+
+CREATE TABLE Comment(
+        Id_user  Int NOT NULL ,
+        Id_photo Int NOT NULL
+	,CONSTRAINT Comment_PK PRIMARY KEY (Id_user,Id_photo)
+
+	,CONSTRAINT Comment_Users_FK FOREIGN KEY (Id_user) REFERENCES Users(Id_user)
+	,CONSTRAINT Comment_Photos0_FK FOREIGN KEY (Id_photo) REFERENCES Photos(Id_photo)
 )ENGINE=InnoDB;
 
 
