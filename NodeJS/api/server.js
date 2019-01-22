@@ -4,101 +4,105 @@ var bodyParser = require('body-parser');
 var mysql = require('mysql');
 var http = require('http');
 
+
 //INSTANTIATE VAR __________________________________________________________________________________________
-var server = express();
+var app = express();
 var router_api = express.Router();
 
-var hostname = '127.0.0.1';
+var hostname = 'localhost';
 var port = 3000;
 
 var dbname = 'dbbde';
 var dbuser = 'root';
 var dbpassword = 'root';
 
-//CONFIGURE ROUTES _________________________________________________________________________________________
-//GLOBAL STUDENT ROUTE API ______________________________________________________________________
-router_api.route('/students')
 
-//GET, POST, PUT, DELETE HTTP REQUESTS
-//GET
-.get(function(req, res){
+//CONFIGURE ROUTES _________________________________________________________________________________________
+
+//GLOBAL ROUTE API ______________________________________________________________________
+
+//ALL HTTP REQUESTS
+//ALL
+app.all('/',function(req, res){
     res.json({
-        message : "Liste des étudiants",
+        message : "Bienvenue sur l'API du BDE !",
         methode : req.method
+    });
+})
+
+//USERS ROUTE API _______________________________________________________________________
+//GET
+app.get('/users', function(req, res){
+    dbbde.query('SELECT * FROM Users', function(error, results, fields){
+        if(error) return res.status(500).send("Un problème est survenu lors de la recherche des utilisateurs.");
+        res.status(200).end(JSON.stringify(results));
+    });
+})
+
+//PUT
+app.put('/users', function(req, res){
+    dbbde.query('UPDATE Users SET' + $set + 'WHERE id = ?',[req.params.id_users], function(error, results, fields){
+        if(error) return res.status(500).send("Un problème est survenu lors de la recherche des utilisateurs.");
+        res.status(200).end(JSON.stringify(results));
+    }); 
+})
+
+//POST
+app.post('/users', function(req, res){
+    res.json({
+        message : "Une ID est nécessaire pour effectuer une requête POST",
+        methode : req.method
+        });
+})
+
+//DELETE
+app.delete('/users', function(req, res){
+    dbbde.query('DELETE * FROM Users', function(error, results, fields){
+        if(error) return res.status(500).send("Un problème est survenu lors de la recherche des utilisateurs.");
+        res.status(200).end(JSON.stringify(results));
+    });
+})
+
+//GLOBAL ROUTE API _______________________________________________________________________
+//GET
+app.get('/users/:id_users', function(req, res){
+    dbbde.query('SELECT * FROM Users WHERE id_users = ?',[req.params.id_users], function(error, results, fields){
+        if(error) return res.status(500).send("Un problème est survenu lors de la recherche des utilisateurs.");
+        res.status(200).end(JSON.stringify(results));
+    });
+})
+
+//PUT
+app.put('/users/:id_users', function(req, res){
+    res.json({
+        message : "Vous souhaitez modifier les informations de l'étudiant n°" + req.params.id_users
     });
 })
 
 //POST
-.post(function(req, res){
+app.post('/users/:id_users', function(req, res){
     res.json({
-        message : "Ajouter des étudiant",
-        methode : req.method
-    });
-})
-
-//PUT
-.put(function(req, res){
-    res.json({
-        message : "Modifier un étudiant",
-        methode : req.method
+        message : "Vous souhaitez ajouter un étudiant avec l'ID numéro n°" + req.params.id_users
     });
 })
 
 //DELETE
-.delete(function(req, res){
-    res.json({
-        message : "Supprimer un étudiant",
-        methode : req.method
+app.delete('/users/:id_users', function(req, res){
+    dbbde.query('DELETE ',[req.params.id_users], function(error, results, fields){
+        if(error) return res.status(500).send("Un problème est survenu lors de la recherche des utilisateurs.");
+        res.status(200).end(JSON.stringify(results));
     });
 })
 
 
-//ROUTE FOR OUR API ______________________________________________________________________
-router_api.route('/students/:student_id')
+//USE EXPRESS'S MODULES ____________________________________________________________________________________
+app.use(router_api);
 
-//GET, PUT, DELETE HTTP REQUESTS
-//GET
-.get(function(req, res){
-    res.json({
-        message : "Vous souhaitez accéder aux informations de l'étudiant n°" + req.params.student_id
-    });
-})
-
-//PUT
-.put(function(req, res){
-    res.json({
-        message : "Vous souhaitez modifier les informations de l'étudiant n°" + req.params.student_id
-    });
-})
-
-//DELETE
-.delete(function(req, res){
-    res.json({
-        message : "Vous souhaitez supprimer les informations de l'étudiant n°" + req.params.student_id
-    });
-})
-
-
-//GLOBAL ROUTE API _______________________________________________________________________
-router_api.route('/')
-
-//ALL HTTP REQUESTS
-//ALL
-.all(function(req, res){
-    res.json({
-        message : "Bienvenue sur l'API du BDE !", methode : req.method
-    });
-})
-
-
-//USE EXPRESS'S MODULES
-server.use(router_api);
-
-server.use(bodyParser.urlencoded({
+app.use(bodyParser.urlencoded({
     extended : true
 }));
-server.use(bodyParser.json());
 
+app.use(bodyParser.json());
 
 //CREATE DB'S CONFIG
 var dbbde = mysql.createConnection({
@@ -107,21 +111,13 @@ var dbbde = mysql.createConnection({
     password : dbpassword,
     database : dbname
 })
+
 //LAUNCH SERVER AND DB
-server.listen(port, hostname, function() {
-    console.log("Le serveur fonctionne sur : http://" + hostname + ":" + port + "\n");   
+app.listen(port, hostname, function() {
+    console.log("Server is running on : http://" + hostname + ":" + port + "\n");   
 });
 
 dbbde.connect(function(err){
     if (err) throw err;
     console.log("Connected to the database");
-});
-
-server.get('/users', function(req, res){
-    dbbde.query('SELECT * FROM Users', function(error, results, fields){
-        if(error) throw error;
-        res.end(JSON.stringify(results))
-        console.log("ça marche");
-    })
-
 });
