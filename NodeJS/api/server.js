@@ -1,13 +1,19 @@
 //IMPORTS __________________________________________________________________________________________________
 var express = require('express');
 var bodyParser = require('body-parser');
+var mysql = require('mysql');
+var http = require('http');
 
 //INSTANTIATE VAR __________________________________________________________________________________________
 var server = express();
 var router_api = express.Router();
 
-var hostname = 'localhost';
+var hostname = '127.0.0.1';
 var port = 3000;
+
+var dbname = 'dbbde';
+var dbuser = 'root';
+var dbpassword = 'root';
 
 //CONFIGURE ROUTES _________________________________________________________________________________________
 //GLOBAL STUDENT ROUTE API ______________________________________________________________________
@@ -88,10 +94,34 @@ router_api.route('/')
 //USE EXPRESS'S MODULES
 server.use(router_api);
 
-server.use(bodyParser.urlencoded({ extended : false}));
+server.use(bodyParser.urlencoded({
+    extended : true
+}));
 server.use(bodyParser.json());
 
-//LAUNCH SERVER
+
+//CREATE DB'S CONFIG
+var dbbde = mysql.createConnection({
+    host : hostname,
+    user : dbuser,
+    password : dbpassword,
+    database : dbname
+})
+//LAUNCH SERVER AND DB
 server.listen(port, hostname, function() {
     console.log("Le serveur fonctionne sur : http://" + hostname + ":" + port + "\n");   
+});
+
+dbbde.connect(function(err){
+    if (err) throw err;
+    console.log("Connected to the database");
+});
+
+server.get('/users', function(req, res){
+    dbbde.query('SELECT * FROM Users', function(error, results, fields){
+        if(error) throw error;
+        res.end(JSON.stringify(results))
+        console.log("ça marche");
+    })
+
 });
