@@ -1,0 +1,15 @@
+<?php
+$PARAM_host='localhost'; //Le chemin vers le serveur
+$PARAM_port='3306'; 
+$APRAM_name_bdd='dbbde'; //Le nom de la bdd
+$PARAM_user='root'; //Le nom de l'utilisateur pour se connecter
+$PARAM_password=''; //Le mot de passe pour se connecter
+try {
+$connexion = new PDO('mysql:host='.$PARAM_host.' ; port='.$PARAM_port.';dbname='.$APRAM_name_bdd, $PARAM_user, $PARAM_password);
+    }
+
+catch(Exception $e) {
+    echo 'Erreur : '.$e->getMessage().'<br />';
+    echo 'N° : '.$e->getCode();
+}
+?>
