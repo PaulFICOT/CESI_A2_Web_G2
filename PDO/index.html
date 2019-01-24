@@ -8,26 +8,31 @@
     
 </head>
 <body>
-    
-    <label for="login">Login :</label>
-    <input 
+    <form method="POST" action="traitement.php">
         
-        type="text" id="login" login="login"
+        <label class="email" for="email">Email :</label>
+        <input 
+        
+            type="text" id="email" email="email"
+            required
+                    minlength="2" maxlength="50"
+
+            size="10"
+        > <br>
+    
+        <label class="password" for="password">Password :</label>
+        <input 
+        
+        type="password" id="password" password="password"
         required
-                minlength="4" maxlength="8"
+                minlength="8" maxlength="50"
 
         size="10"
     >
-    
-    <label for="password">Password :</label>
-    <input 
-        
-    type="text" id="password" password="password"
-    required
-            minlength="4" maxlength="8"
+        <label for="birthdate">Birthdate</label>
+        <input type="date" id="birthdate" name="birthdate"><br>
+        <input type="submit" value="envoyer">
 
-    size="10"
->
-    <h4>Password</h4>
+    </form>
 </body>
 </html>

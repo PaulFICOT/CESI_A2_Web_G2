@@ -1,0 +1,28 @@
+label.password {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+
+label.password {
+    margin: .4rem 0;
+}
+
+.note {
+    font-size: .8em;
+}
+label.email {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+
+label.email {
+    margin: .4rem 0;
+}
+
+.note {
+    font-size: .8em;
+}
