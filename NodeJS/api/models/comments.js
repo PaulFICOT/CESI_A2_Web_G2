@@ -1,11 +1,11 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const Comment = sequelize.define('Comment', {
+  const Comments = sequelize.define('Comments', {
     Id_user: DataTypes.INTEGER,
     Id_photo: DataTypes.INTEGER
   }, {});
-  Comment.associate = function(models) {
+  Comments.associate = function(models) {
     // associations can be defined here
   };
-  return Comment;
+  return Comments;
 };

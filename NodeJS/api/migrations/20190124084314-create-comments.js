@@ -9,11 +9,9 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       Id_user: {
-        allowNull: false,
         type: Sequelize.INTEGER
       },
       Id_photo: {
-        allowNull: false,
         type: Sequelize.INTEGER
       },
       createdAt: {
