@@ -1,20 +1,19 @@
-// DataBase 
+//MODULE DEPENDENCIES
 var mysql = require("mysql");
+var config = require('./dbconfig');
+
+//DATABASE INFOS
+var db_name = 'dbbde';
+var db_user = 'root';
+var db_password = 'root';
+var db_host = 'localhost';
+
+//DATABASE CONNECTION
 var connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "homestead"
+  host: db_host,
+  user: db_user,
+  password: db_password,
+  database: db_name
 });
-/*connection.connect(function(err){
-  if(err){
-    console.log('Error connecting to Db');
-    return;
-  }
-  console.log('Connection established');
-/*
-connection.query('INSERT INTO `user`(`id_user`, `first_name`, `last_name`, `email`, `password`, `id_status_user`, `id_school`, `created_at`, `updated_at`) VALUES ([1],[bla],[bla],[bla@gmail.com],[password],[2],[1],[],[])', function (err, rows, fields) {
-  console.log('insert');
-})
-});*/
+
 module.exports = connection;
