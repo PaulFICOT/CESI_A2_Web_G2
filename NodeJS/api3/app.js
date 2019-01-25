@@ -37,15 +37,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 12//Adding routes
 app.use('/', routes);
 app.use('/category', Categories);
-app.use('/centers', Centers);
-app.use('/contains', Contains);
-app.use('/events', Events);
-app.use('/likes', Likes);
-app.use('/orders', Orders);
-app.use('/products', Products);
+app.use('/center', Centers);
+app.use('/contain', Contains);
+app.use('/event', Events);
+app.use('/like', Likes);
+app.use('/order', Orders);
+app.use('/product', Products);
 app.use('/sign_in', Signs_in);
-app.use('/users', Users);
-app.use('/votes', Votes);
+app.use('/user', Users);
+app.use('/vote', Votes);
 
 
 // catch 404 and forward to error handler
