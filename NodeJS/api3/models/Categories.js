@@ -6,14 +6,14 @@ var Categories = {
     getUsersById: function(id, callback) {  
         return db.query("SELECT * FROM Categories WHERE Id_category=?", [id], callback);  
     },  
-    addUser: function(Users, callback) {  
-        return db.query("INSERT INTO Categories(Category_type) VALUES(?)", [Categories.category_type], callback);  
+    addUser: function(Categories, callback) {  
+        return db.query("INSERT INTO Categories(Category_type) VALUES(?)", [Categories.Category_type], callback);  
     },  
     deleteUser: function(id, callback) {  
         return db.query("DELETE FROM Categories WHERE Id_category=?", [id], callback);  
     },  
-    updateUser: function(id, Users, callback) {  
-        return db.query("UPDATE Categories SET Category_type=? WHERE Id_category=?", [Categories.category_type], callback); 
+    updateUser: function(id, Categories, callback) {  
+        return db.query("UPDATE Categories SET Category_type=? WHERE Id_category=?", [Categories.Category_type, id], callback); 
     }  
 };  
 module.exports = Categories;  

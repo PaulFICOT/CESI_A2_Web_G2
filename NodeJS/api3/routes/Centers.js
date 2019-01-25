@@ -42,7 +42,7 @@ router.delete('/:id', function(req, res, next) {
     });  
 });  
 router.put('/:id', function(req, res, next) {  
-    Centers.updateCenters(req.params.id, req.body, function(err, rows) {  
+    Centers.updateCenter(req.params.id, req.body, function(err, rows) {  
         if (err) {  
             res.json(err);  
         } else {  
