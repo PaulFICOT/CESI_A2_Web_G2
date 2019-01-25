@@ -9,7 +9,7 @@
     <input type="text" name="LastName" placeholder="Nom de famille">   
     <input type="password" name="password" placeholder="Mot de Passe">   
     <input type="password" name="password_confirmation" placeholder="Confirmation">   
-    <input type="text" name="Centre" placeholder="Centre">   
+    <input type="text" name="Centre" placeholder="Centre">
     <input type="submit" value="M'inscrire">   
 
     </form>
