@@ -4,7 +4,7 @@ var Categories = require('../models/Categories');
 
 router.get('/:id?', function(req, res, next) {  
     if (req.params.id) {  
-        Categories.getCategoryById(req.params.id, function(err, rows) {  
+        Categories.getCategoriesById(req.params.id, function(err, rows) {  
             if (err) {  
                 res.json(err);  
             } else {  
