@@ -1,6 +1,5 @@
 //MODULE DEPENDENCIES
 var mysql = require("mysql");
-var config = require('./dbconfig');
 
 //DATABASE INFOS
 var db_name = 'dbbde';

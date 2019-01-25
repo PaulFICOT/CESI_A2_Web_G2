@@ -16,4 +16,4 @@ var Events = {
         return db.query("UPDATE events SET event_title=?, event_description=?, event_approval=?, event_date=?, event_recurrence=?, event_price=?, event_voted=?, event_period=?, event_location=?, id_user=?, id_user_Users=? WHERE id_event=?", [Event.event_title, Event.event_description, Event.event_approval, Event.event_date, Event.event_recurrence, Event.event_price, Event.event_period, Event.event_location, Event.Id_user, Id_user_Users], callback); 
     }  
 };  
-module.exports = Event;  
+module.exports = Events;  

@@ -16,4 +16,4 @@ var Votes = {
         return db.query("UPDATE Votes SET Id_user=? WHERE Id_event=?", [Votes.Id_user], callback); 
     }  
 };  
-module.exports = Orders;  
+module.exports = Votes;  
