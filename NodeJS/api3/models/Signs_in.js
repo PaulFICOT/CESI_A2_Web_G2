@@ -6,14 +6,14 @@ var Signs_in = {
     getSigns_inById: function(id, callback) {  
         return db.query("SELECT * FROM Orders WHERE Id_event=?", [id], callback);  
     },  
-    addSign_in: function(Orders, callback) {  
+    addSign_in: function(Signs_in, callback) {  
         return db.query("INSERT INTO Orders (Id_user) VALUES(?)", [Signs_in.Id_user], callback);  
     },  
     deleteSign_in: function(id, callback) {  
         return db.query("DELETE FROM Orders WHERE Id_event=?", [id], callback);  
     },  
-    updateSign_in: function(id, Orders, callback) {  
-        return db.query("UPDATE Orders SET Id_user=? WHERE Id_event=?", [Signs_in.Id_user], callback); 
+    updateSign_in: function(id, Signs_in, callback) {  
+        return db.query("UPDATE Orders SET Id_user=? WHERE Id_event=?", [id, Signs_in.Id_user], callback); 
     }  
 };  
 module.exports = Signs_in;  

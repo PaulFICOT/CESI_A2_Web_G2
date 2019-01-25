@@ -13,7 +13,7 @@ var Photos = {
         return db.query("DELETE FROM Photos WHERE Id_photo=?", [id], callback);  
     },  
     updatePhoto: function(id, Photos, callback) {  
-        return db.query("UPDATE Photos SET Photo_name=?, Photo_is_public=?, Id_event=? WHERE Id_photo=?", [Photos.Photo_name, Photos.Photo_is_public, Photos.Id_event], callback); 
+        return db.query("UPDATE Photos SET Photo_name=?, Photo_is_public=?, Id_event=? WHERE Id_photo=?", [id, Photos.Photo_name, Photos.Photo_is_public, Photos.Id_event], callback); 
     }  
 };  
 module.exports = Photos;  

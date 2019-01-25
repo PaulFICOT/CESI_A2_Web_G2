@@ -13,7 +13,7 @@ var Likes = {
         return db.query("DELETE FROM Likes WHERE Id_photo=?", [id], callback);  
     },  
     updateLike: function(id, Likes, callback) {  
-        return db.query("UPDATE Likes SET Id_user=? WHERE Id_photo=?", [Likes.Id_user], callback); 
+        return db.query("UPDATE Likes SET Id_user=? WHERE Id_photo=?", [Likes.Id_user, id], callback); 
     }  
 };  
 module.exports = Likes;  
