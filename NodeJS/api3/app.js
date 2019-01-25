@@ -6,8 +6,17 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var cors = require('cors');
 var routes = require('./routes/index');
-var users = require('./routes/users');
+var Categories = require('./routes/Categories');
+var Centers = require('./routes/Centers');
+var Contains = require('./routes/Contains');
 var Events = require('./routes/Events')
+var Likes = require('./routes/Likes');
+var Orders = require('./routes/Orders');
+var Products = require('./routes/Products');
+var Sign_in = require('./routes/Sign_in');
+var Users = require('./routes/Users');
+var Votes = require('./routes/Votes');
+
 var app = express();
 
 
@@ -24,8 +33,18 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/users', users);
-app.use('/Events', Events);
+app.use('/category', Categories);
+app.use('./centers', Centers);
+app.use('./contains', Contains);
+app.use('/events', Events);
+app.use('./likes', Likes);
+app.use('./orders', Orders);
+app.use('./products', Products);
+app.use('./sign_in', Sign_in);
+app.use('/users', Users);
+app.use('./votes', Votes);
+
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

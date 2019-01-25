@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
-var Events = require('../models/Events');
+var Centers = require('../models/Centers');
 
 router.get('/:id?', function(req, res, next) {  
     if (req.params.id) {  
-        Events.getEventsById(req.params.id, function(err, rows) {  
+        Centers.getCentersById(req.params.id, function(err, rows) {  
             if (err) {  
                 res.json(err);  
             } else {  
@@ -12,7 +12,7 @@ router.get('/:id?', function(req, res, next) {
             }  
         });  
     } else {  
-        Events.getAllEvents(function(err, rows) {  
+        Centers.getAllCenters(function(err, rows) {  
             if (err) {  
                 res.json(err);  
             } else {  
@@ -23,7 +23,7 @@ router.get('/:id?', function(req, res, next) {
 });  
 
 router.post('/', function(req, res, next) {  
-    Events.addEvent(req.body, function(err, count) {  
+    Centers.addCenter(req.body, function(err, count) {  
         if (err) {  
             res.json(err);  
         } else {  
@@ -33,7 +33,7 @@ router.post('/', function(req, res, next) {
 });  
 
 router.delete('/:id', function(req, res, next) {  
-    Events.deleteEvent(req.params.id, function(err, count) {  
+    Centers.deleteCenter(req.params.id, function(err, count) {  
         if (err) {  
             res.json(err);  
         } else {  
@@ -42,7 +42,7 @@ router.delete('/:id', function(req, res, next) {
     });  
 });  
 router.put('/:id', function(req, res, next) {  
-    Events.updateEvent(req.params.id, req.body, function(err, rows) {  
+    Centers.updateCenters(req.params.id, req.body, function(err, rows) {  
         if (err) {  
             res.json(err);  
         } else {  
