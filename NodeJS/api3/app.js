@@ -5,6 +5,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var cors = require('cors');
+
+//Routes config
 var routes = require('./routes/index');
 var Categories = require('./routes/Categories');
 var Centers = require('./routes/Centers');
@@ -13,7 +15,7 @@ var Events = require('./routes/Events')
 var Likes = require('./routes/Likes');
 var Orders = require('./routes/Orders');
 var Products = require('./routes/Products');
-var Sign_in = require('./routes/Sign_in');
+var Signs_in = require('./routes/Signs_in');
 var Users = require('./routes/Users');
 var Votes = require('./routes/Votes');
 
@@ -32,6 +34,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+12//Adding routes
 app.use('/', routes);
 app.use('/category', Categories);
 app.use('./centers', Centers);
@@ -40,7 +43,7 @@ app.use('/events', Events);
 app.use('./likes', Likes);
 app.use('./orders', Orders);
 app.use('./products', Products);
-app.use('./sign_in', Sign_in);
+app.use('./sign_in', Signs_in);
 app.use('/users', Users);
 app.use('./votes', Votes);
 

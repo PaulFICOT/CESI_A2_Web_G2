@@ -182,16 +182,16 @@ ENGINE=InnoDB;
 
 
 #------------------------------------------------------------
-# Table: Sign_in
+# Table: Signs_in
 #------------------------------------------------------------
 
-CREATE TABLE Sign_in(
+CREATE TABLE Signs_in(
         Id_event INT NOT NULL ,
         Id_user  INT NOT NULL,
-        CONSTRAINT Sign_in_PK PRIMARY KEY (Id_event,Id_user),
+        CONSTRAINT Signs_in_PK PRIMARY KEY (Id_event,Id_user),
         
-        CONSTRAINT Sign_in_Event_FK FOREIGN KEY (Id_event) REFERENCES events(Id_event),
-        CONSTRAINT Sign_in_User_FK FOREIGN KEY (Id_user) REFERENCES Users(Id_user)
+        CONSTRAINT Signs_in_Event_FK FOREIGN KEY (Id_event) REFERENCES events(Id_event),
+        CONSTRAINT SignsS_in_User_FK FOREIGN KEY (Id_user) REFERENCES Users(Id_user)
 )
 ENGINE=InnoDB;	
 
