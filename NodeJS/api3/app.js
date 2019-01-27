@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var cors = require('cors');
 
 //Routes config
-var routes = require('./routes/index');
+var Routes = require('./routes/index');
 var Categories = require('./routes/Categories');
 var Centers = require('./routes/Centers');
 var Contains = require('./routes/Contains');
@@ -18,6 +18,9 @@ var Products = require('./routes/Products');
 var Signs_in = require('./routes/Signs_in');
 var Users = require('./routes/Users');
 var Votes = require('./routes/Votes');
+
+var Login = require('./routes/Login');
+var Register = require('./routes/Register');
 
 var app = express();
 
@@ -35,7 +38,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 12//Adding routes
-app.use('/', routes);
+app.use('/', Routes);
 app.use('/category', Categories);
 app.use('/center', Centers);
 app.use('/contain', Contains);
@@ -46,6 +49,9 @@ app.use('/product', Products);
 app.use('/signin', Signs_in);
 app.use('/user', Users);
 app.use('/vote', Votes);
+
+app.use('/login', Login);
+app.use('/register', Register);
 
 
 // catch 404 and forward to error handler
