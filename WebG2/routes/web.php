@@ -22,3 +22,11 @@ Route::get('/inscription', function() {
 Route::post('/inscription', function () {
     return 'Formulaire reçu';
 });
+
+Route::get('/connexion', function() {
+    return view('connexion');
+});
+
+Route::post('/connexion', function() {
+    return 'clap clap';
+});
