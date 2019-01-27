@@ -19,8 +19,8 @@ var Signs_in = require('./routes/Signs_in');
 var Users = require('./routes/Users');
 var Votes = require('./routes/Votes');
 
-var Login = require('./routes/Login');
-var Register = require('./routes/Register');
+//var Login = require('./routes/Login');
+//var Register = require('./routes/Register');
 
 var app = express();
 
@@ -50,8 +50,8 @@ app.use('/signin', Signs_in);
 app.use('/user', Users);
 app.use('/vote', Votes);
 
-app.use('/login', Login);
-app.use('/register', Register);
+//app.use('/login', Login);
+//app.use('/register', Register);
 
 
 // catch 404 and forward to error handler
