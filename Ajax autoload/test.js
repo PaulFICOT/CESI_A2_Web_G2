@@ -6,8 +6,12 @@ function yHandler(){
 
     if(y >= contentHeight) {
         wrap.innerHTML += '<div class="newData"></div>';
-        //Ajax call
-    }
+        $(function(){
+            $.ajax({
+
+            });
+        });
+    } //ENDIF
     var status = document.getElementById('status');
     status.innerHTML = contentHeight + " | " + y;
 }
