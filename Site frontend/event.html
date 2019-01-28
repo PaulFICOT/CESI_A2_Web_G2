@@ -38,8 +38,33 @@
 
           <div class="toCenter text-cesiBlue">
             <h2 class="heavy-bottom">Boîte à idées</h2>
-            <a id="boite_idees" class="button round cesiBlue crop btn done" href="#"><h4 class="text-button">CREER SON EVENEMENT</h4></a>
-            <h4 class="heavy">Vous pouvez retrouver ici tous les évènements BDE proposés par les étudiants !</h4>
+          <!--  <a id="boite_idees" class="button round cesiBlue crop btn done" href="#"><h4 class="text-button">CREER SON EVENEMENT</h4></a> -->
+
+          <!--Formulaire Boite à idées-->
+          <div class="toCenter">
+            <div class="pad shadow selected">
+                <form action="" id="contact-form" method="post" class="wide center" data-ajax-form="true">
+                    <h3 id="ResponseContact-popUp" class="text-cesiBlue heavy-bottom">Proposez-nous vos évènements !</h2>
+                    <div class="label cropTop"><label class="cropTop text-cesiBlue" for="name55">Nom </label></div>
+                    <input class="stroke wide" id="name55" type="name" name="Name" placeholder="Nom" required />
+                    <div class="label cropTop"><label class="cropTop text-cesiBlue" for="name55">Prénom</label></div>
+                    <input class="stroke wide" id="name55" type="name" name="Name" placeholder="Prénom" required />
+                    <div class="label "><label class="text-cesiBlue" for="email55">Adresse Email</label></div>
+                    <input class="stroke  wide" id="email55" type="email" name="Email" placeholder="Email" required />
+                    <div class="label "><label class="text-cesiBlue" for="email55">Titre de l'évènement</label></div>
+                    <input class="stroke wide" id="name55" type="name" name="Name" placeholder="Titre" required />
+                    <div class="label cropTop"><label class="cropTop text-cesiBlue" for="name55">Localisation</label></div>
+                    <input class="stroke wide" id="name55" type="name" name="Name" placeholder="Localisation de l'évènement" />
+                    <div class="label cropTop"><label class="cropTop text-cesiBlue" for="name55">Tarif</label></div>
+                    <input class="stroke wide" id="name55" type="name" name="Name" placeholder="Tarif" />
+                    <div class="label"><label class="text-cesiBlue" for="message55">Description</label></div>
+                    <textarea class="left" id="message55" type="text" name="Body" placeholder="Description de l'évènement" required></textarea>
+                    <input class="button cesiBlue round btn margin-top-2 cropBottom" type="submit" name="submit-Contact" value="Envoyer le message" data-success-text="Envoyé !" data-success-class="green" />
+                </form>
+            </div>
+          </div>
+
+            <h4 class="heavy-strong">Vous pouvez retrouver ici tous les évènements BDE proposés par les étudiants !</h4>
           </div>
           <div class="grid">
             <div class="col-6-12 toLeft">
@@ -62,31 +87,6 @@
 
         </div>
       </div>
-    </div>
-    <div class="popup" data-popup-id="boite_idees_popUp">
-        <div class="close"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg></div>
-        <div class="content popupContent">
-            <div class="container">
-                <div class="wrap padding-0">
-                    <h1 class="text-cesiBlue">Proposez un évènement</h1>
-
-                    <div class="fix-5-12 margin-top-6">
-                        <div class="pad shadow selected">
-                            <form action="/Home/SendEmail" id="contact-form" method="post" class="wide center" data-ajax-form="true">
-                                <h2 id="ResponseContact-popUp"></h2>
-                                <div class="label cropTop"><label class="cropTop text-cesiBlue" for="name55">Nom </label></div>
-                                <input class="stroke  wide" id="name55" type="name" name="Name" placeholder="Nom" required />
-                                <div class="label "><label class="text-cesiBlue" for="email55">Adresse Email</label></div>
-                                <input class="stroke  wide" id="email55" type="email" name="Email" placeholder="Email" required />
-                                <div class="label"><label class="text-cesiBlue" for="message55">Message</label></div>
-                                <textarea class="left" id="message55" type="text" name="Body" placeholder="Message" required></textarea>
-                                <input class="button round btn margin-top-2 cropBottom" type="submit" name="submit-Contact" value="Envoyer le message" data-success-text="Envoyé !" data-success-class="green" />
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
     <footer class="cesiBlue">
        <div class="grid center">

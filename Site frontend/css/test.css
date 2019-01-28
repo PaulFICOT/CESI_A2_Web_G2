@@ -307,6 +307,11 @@ small .small {
   margin-top: 60px !important;
 }
 
+.heavy-strong {
+  margin-top: 100px !important;
+  margin-bottom: 100px !important;
+}
+
 .uppercase {
   text-transform: uppercase !important;
   letter-spacing: 0.15em !important;
