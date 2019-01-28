@@ -24,7 +24,7 @@ Route::post('/inscription', function () {
     $users->User_mail = request('email');
     $users->User_firstname = request('FirstName');
     $users->User_lastname = request('LastName');
-    $users->User_password = request('password');
+    $users->User_password = bcrypt(request('password')); /*bcryptjs*/
     /*$users->User_centre = request('Centre');*/
     $users->save();
 
