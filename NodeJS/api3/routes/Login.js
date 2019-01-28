@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var Products = require('../models/Logins');
+var Products = require('../models/Login');
 
 router.get('/:id?', function(req, res, next) {  
     if (req.params.id) {  

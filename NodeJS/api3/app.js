@@ -1,13 +1,15 @@
 var express = require('express');
 var path = require('path');
-//var favicon = require('serve-favicon');
+var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var cors = require('cors');
 
 //Routes config
-var Routes = require('./routes/index');
+var Index = require('./routes/index');
+var Api = require('./routes/api')
+
 var Categories = require('./routes/Categories');
 var Centers = require('./routes/Centers');
 var Contains = require('./routes/Contains');
@@ -38,7 +40,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 12//Adding routes
-app.use('/api', Routes);
+app.use('/', Index);
+app.use('/api', Api)
+
 app.use('/api/category', Categories);
 app.use('/api/center', Centers);
 app.use('/api/contain', Contains);
@@ -53,6 +57,7 @@ app.use('/api/vote', Votes);
 app.use('/login', Logins);
 app.use('/register', Registers);
 
+app.use(favicon(path.join(__dirname,'public','favicon.ico')))
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
