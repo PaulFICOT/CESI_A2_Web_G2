@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('contenu')
+@section('content')
     <form action="/inscription" method="post">
         {{  csrf_field() }}
 

@@ -78,7 +78,7 @@
             @endif
             <div class="content">
 
-            @yield('contenu')
+            @yield('content')
 
 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
