@@ -15,7 +15,7 @@ function yHandler(){
                     url: 'http://localhost:3000/api/event/' + $id,
                     success: function(events) {
                         console.log(events);
-                        if(events.lenght != 0){
+                        if($.trim(events)){
                             $.each(events, function(i, event){
                                 $events.append('<li id="event"> Nom de l\'événement: ' + event.Event_title + '</li>');
                                 $events.append('<li id="event"> Description de l\'événement: ' + event.Event_description + '</li>');
@@ -26,7 +26,7 @@ function yHandler(){
                             events.innerHTML += '</div>';
 
                         }else{
-                            console.log(i);
+                            console.log('empty');
                             i--;
                         }
                     },
