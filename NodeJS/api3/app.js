@@ -26,12 +26,11 @@ var Registers = require('./routes/Register');
 
 var app = express();
 
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 // uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(cors());
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -40,7 +39,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 12//Adding routes
-app.use('/', Index);
+app.use('http://localhost:3000/', Index);
 app.use('/api', Api)
 
 app.use('/api/category', Categories);
@@ -57,7 +56,6 @@ app.use('/api/vote', Votes);
 app.use('/login', Logins);
 app.use('/register', Registers);
 
-app.use(favicon(path.join(__dirname,'public','favicon.ico')))
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
