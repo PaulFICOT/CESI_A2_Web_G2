@@ -19,8 +19,8 @@ var Signs_in = require('./routes/Signs_in');
 var Users = require('./routes/Users');
 var Votes = require('./routes/Votes');
 
-//var Login = require('./routes/Login');
-//var Register = require('./routes/Register');
+var Logins = require('./routes/Login');
+var Registers = require('./routes/Register');
 
 var app = express();
 
@@ -38,20 +38,20 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 12//Adding routes
-app.use('/', Routes);
-app.use('/category', Categories);
-app.use('/center', Centers);
-app.use('/contain', Contains);
-app.use('/event', Events);
-app.use('/like', Likes);
-app.use('/order', Orders);
-app.use('/product', Products);
-app.use('/signin', Signs_in);
-app.use('/user', Users);
-app.use('/vote', Votes);
+app.use('/api', Routes);
+app.use('/api/category', Categories);
+app.use('/api/center', Centers);
+app.use('/api/contain', Contains);
+app.use('/api/event', Events);
+app.use('/api/like', Likes);
+app.use('/api/order', Orders);
+app.use('/api/product', Products);
+app.use('/api/signin', Signs_in);
+app.use('/api/user', Users);
+app.use('/api/vote', Votes);
 
-//app.use('/login', Login);
-//app.use('/register', Register);
+app.use('/login', Logins);
+app.use('/register', Registers);
 
 
 // catch 404 and forward to error handler
