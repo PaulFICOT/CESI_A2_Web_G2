@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <link href="css/test.css" rel="stylesheet">
-    <title>BDE CESI</title>
+    <script href="js/script.js" type="text/javascript"></script>
+    <script href="js/jquery.js" type="text/javascript"></script>
+    <title>BDE - Accueil</title>
   </head>
   <body>
 
@@ -14,8 +16,8 @@
         </div>
         <div class="center">
           <ul class="menu uppercase">
-            <li><a href="event.html"><p.small class="">Les Evènements</p.small></a></li>
             <li><a><p.small class = "">Le Calendrier</p.small></a></li>
+            <li><a href="event.html"><p.small class="">Boîte à idées</p.small></a></li>
             <li><a href="boutique.html"><p.small>La Boutique</p.small></a></li>
           </ul>
         </div>
@@ -33,16 +35,15 @@
           <div class="grid toCenter">
             <div class="col-6-12 toLeft">
               <h2 class="text-cesiBlue">Calendrier</h2>
-
             </div>
             <div class="col-6-12 toRight">
               <h2 class="text-cesiBlue">Actualités</h2>
               <div id="slider" class="toCenter">
                 <figure>
-                  <img src="ressources/images/event1.jpg" alt="">
-                  <img src="ressources/images/event2.jpg" alt="">
-                  <img src="ressources/images/event3.jpg" alt="">
-                  <img src="ressources/images/event4.jpg" alt="">
+                  <img src="ressources/images/event1.jpg" alt="évènement 1">
+                  <img src="ressources/images/event2.jpg" alt="évènement 2">
+                  <img src="ressources/images/event3.jpg" alt="évènement 3">
+                  <img src="ressources/images/event4.jpg" alt="évènement 4">
                 </figure>
               </div>
             </div>
@@ -51,21 +52,26 @@
               <h2 class="text-cesiBlue heavy">Boîte à idées</h2>
               <p class="small text-cesiBlue">Vous avez envie de proposer un évènement dans le cadre du BDE ?
               Partagez-nous vos idées !</p>
-              <a href="#" id="Boite_Idees"><img src="ressources/images/boite_idees.png" alt="Boîte à idées" width="25%" height="25%"></a>
+              <a href="#" onclick="" id="boite_idees"><img src="ressources/images/boite_idees.png" alt="Boîte à idées" width="25%" height="25%"></a>
               </div>
             </div>
           </div>
       </div>
     </div>
   </div>
-<!--   <footer class="cesiBlue">
-      <div class="center">
-        <ul class="">
-          <li><a>Mentions Légales</a></li>
-          <li><a>Contactez-nous</a></li>
-          <li><a>Manifeste</a></li>
-        </ul>
+ <footer class="cesiBlue">
+    <div class="grid center">
+      <div class="col-4-12 toCenter"><a><p class="tiny">Mentions Légales</p></a></div>
+      <div class="col-4-12 toCenter"><a><p class="tiny">Contactez-nous</p></a></div>
+      <div class="col-4-12 toCenter"><a><p class="tiny">Manisfeste</p></a></div>
+    </div>
+    </footer>
+  <!--  <div class="popup" data-popup-id ="boite_idees">
+      <div class="close">
+        <svg>
+
+        </svg>
       </div>
-    </footer> -->
+    </div> -->
   </body>
 </html>

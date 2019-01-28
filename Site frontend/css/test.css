@@ -173,7 +173,8 @@ h2.micro,
 }
 h2.huge,
 .h2.huge {
-  font-size: 45px;
+  font-size: 45
+  px;
 }
 
 h3,
@@ -402,7 +403,10 @@ div#slider figure img {
 
 .filtre {
   position: absolute;
-
+  left: 5px;
+  font-size: 20px;
+  text-align: center;
+  background: #D4D4D4D4;
 }
 
 /* buttons */
@@ -1858,6 +1862,7 @@ html.mobile .showForMobileInline {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
+
 .panel.large {
   padding: 2.78% 5%;
 }

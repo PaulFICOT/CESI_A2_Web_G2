@@ -3,9 +3,14 @@
   <head>
     <meta charset="utf-8">
     <link href="css/test.css" rel="stylesheet">
-    <title>Evenement BDE</title>
+    <script href="js/script.js" type="text/javascript"></script>
+    <script href="js/jquery.js" type="text/javascript"></script>
+    <title>BDE - Events</title>
   </head>
   <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+<symbol id="close" viewBox="0 0 30 30"><path d="M15 0c-8.3 0-15 6.7-15 15s6.7 15 15 15 15-6.7 15-15-6.7-15-15-15zm5.7 19.3c.4.4.4 1 0 1.4-.2.2-.4.3-.7.3s-.5-.1-.7-.3l-4.3-4.3-4.3 4.3c-.2.2-.4.3-.7.3s-.5-.1-.7-.3c-.4-.4-.4-1 0-1.4l4.3-4.3-4.3-4.3c-.4-.4-.4-1 0-1.4s1-.4 1.4 0l4.3 4.3 4.3-4.3c.4-.4 1-.4 1.4 0s.4 1 0 1.4l-4.3 4.3 4.3 4.3z" /></symbol>
+  </svg>
 
     <nav class="cesiBlue top panel">
       <div class="sections desktop">
@@ -14,8 +19,8 @@
         </div>
         <div class="center">
           <ul class="menu uppercase">
-            <li><a href="event.html"><p.small>Les Evènements</p.small></a></li>
-            <li><a><p.small>Le Calendrier</p.small></a></li>
+            <li><a><p.small class = "">Le Calendrier</p.small></a></li>
+            <li><a href="event.html"><p.small class="">Boîte à idées</p.small></a></li>
             <li><a href="boutique.html"><p.small>La Boutique</p.small></a></li>
           </ul>
         </div>
@@ -33,7 +38,7 @@
 
           <div class="toCenter text-cesiBlue">
             <h2 class="heavy-bottom">Boîte à idées</h2>
-            <a class="button round cesiBlue crop btn done" onclick=""><h4 class="text-button">CREER SON EVENEMENT</h4></a>
+            <a id="boite_idees" class="button round cesiBlue crop btn done" href="#"><h4 class="text-button">CREER SON EVENEMENT</h4></a>
             <h4 class="heavy">Vous pouvez retrouver ici tous les évènements BDE proposés par les étudiants !</h4>
           </div>
           <div class="grid">
@@ -42,7 +47,7 @@
               <p class="tiny">Une soirée LAN ouvert à tous, mais cette fois-ci concentré sur des jeux de startégie comme AoE/Civilisation/...</p>
               <a><p class="small heavy-top">Sortie Canoë</p></a>
               <p class="tiny">Une sortie le jeudi après-midi à la base nautique de St-Laurent pour ceux qui sont intéressés (Location de matériel requis sur place)</p>
-              <a><p class="small">Evènement Random</p></a>
+              <a><p class="small heavy-top">Evènement Random</p></a>
               <p class="tiny">Description d'un évènement random écrit par une personne random depuis un support random</p>
             </div>
             <div class="col-6-12 toRight">
@@ -54,8 +59,41 @@
               <p class="tiny">Soirée avec des jeux de rôle et un repas à thème (Médiéval/SF/...)</p>
             </div>
           </div>
+
         </div>
       </div>
     </div>
+    <div class="popup" data-popup-id="boite_idees_popUp">
+        <div class="close"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg></div>
+        <div class="content popupContent">
+            <div class="container">
+                <div class="wrap padding-0">
+                    <h1 class="text-cesiBlue">Proposez un évènement</h1>
+
+                    <div class="fix-5-12 margin-top-6">
+                        <div class="pad shadow selected">
+                            <form action="/Home/SendEmail" id="contact-form" method="post" class="wide center" data-ajax-form="true">
+                                <h2 id="ResponseContact-popUp"></h2>
+                                <div class="label cropTop"><label class="cropTop text-cesiBlue" for="name55">Nom </label></div>
+                                <input class="stroke  wide" id="name55" type="name" name="Name" placeholder="Nom" required />
+                                <div class="label "><label class="text-cesiBlue" for="email55">Adresse Email</label></div>
+                                <input class="stroke  wide" id="email55" type="email" name="Email" placeholder="Email" required />
+                                <div class="label"><label class="text-cesiBlue" for="message55">Message</label></div>
+                                <textarea class="left" id="message55" type="text" name="Body" placeholder="Message" required></textarea>
+                                <input class="button round btn margin-top-2 cropBottom" type="submit" name="submit-Contact" value="Envoyer le message" data-success-text="Envoyé !" data-success-class="green" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="cesiBlue">
+       <div class="grid center">
+         <div class="col-4-12 toCenter"><a><p class="tiny">Mentions Légales</p></a></div>
+         <div class="col-4-12 toCenter"><a><p class="tiny">Contactez-nous</p></a></div>
+         <div class="col-4-12 toCenter"><a><p class="tiny">Manisfeste</p></a></div>
+       </div>
+       </footer>
   </body>
 </html>
