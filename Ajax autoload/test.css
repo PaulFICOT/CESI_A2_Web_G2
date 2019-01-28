@@ -1,0 +1,27 @@
+div#status{
+    position: fixed;
+    font-size: 24px;
+}
+
+div#events{
+    width: 800px;
+    margin-bottom: 15px;
+}
+
+div.newData{
+    height: 1000px;
+    background: #09F;
+    margin: 10px 0px;
+}
+li{
+    background: #09F;
+    margin-bottom: 10px;
+    list-style-type: none;
+
+}
+
+#event{
+    font-size: 50px;
+    margin-bottom: 10px;
+    text-align: center
+}
