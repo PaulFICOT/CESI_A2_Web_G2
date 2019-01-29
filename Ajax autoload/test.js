@@ -3,7 +3,7 @@ function yHandler(){
     var contentHeight = events.offsetHeight; //Height of the content
     var yOffset = window.pageYOffset;      //Get the vertical scroll
     var y = yOffset + window.innerHeight;
-    
+
     if(y >= contentHeight) {
         events.innerHTML += '<div class="event">';
         for(i = 1; i<6; i++){
@@ -33,7 +33,7 @@ function yHandler(){
                     error: function(XMLHttpRequest, textStatus, errorThrown){
                         alert("Status: " + textStatus); alert("Error: " + errorThrown);
                     }
-                }); 
+                });
             });
             $id++;
         }
