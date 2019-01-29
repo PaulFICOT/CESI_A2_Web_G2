@@ -1,10 +1,13 @@
+@extends('layout')
+
+@section('content')
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
     <link href="css/site.css" rel="stylesheet">
-    <script href="js/script.js" type="text/javascript"></script>
-    <script href="js/jquery.js" type="text/javascript"></script>
+    <script href="js/script.js"></script>
+    <script href="js/jquery.js" ></script>
     <title>BDE - Login</title>
   </head>
 
@@ -42,3 +45,4 @@
     </div>
 </body>
 </html>
+            @endsection
