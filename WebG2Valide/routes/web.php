@@ -20,3 +20,5 @@ Route::post('/inscription', 'InscriptionController@traitement');
 Route::get('/connexion', 'ConnexionController@formulaire');
 
 Route::post('/connexion', 'ConnexionController@traitement');
+
+?>
