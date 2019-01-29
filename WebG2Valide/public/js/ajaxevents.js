@@ -17,11 +17,13 @@ function yHandler(){
                         console.log(events);
                         if($.trim(events)){
                             $.each(events, function(i, event){
-                                $events.append('<li id="event"> Nom de l\'événement: ' + event.Event_title + '</li>');
-                                $events.append('<li id="event"> Description de l\'événement: ' + event.Event_description + '</li>');
-                                $events.append('<li id="event"> Date de l\'événement: ' + event.Event_date + '</li>');
-                                $events.append('<li id="event"> Coût de l\'événement: ' + event.Event_price + ' €</li>');
-                                $events.append('<li id="event"> L\'événement au lieu au : ' + event.Event_location + '</li>');
+                                $events.append('<div class="pad shadow heavy-bottom">');
+                                $events.append('<p class="text-cesiBlue" id="event"> Nom de l\'événement: ' + event.Event_title + '</p>');
+                                $events.append('<p class="small" id="event"> Description de l\'événement: ' + event.Event_description + '</li>');
+                                $events.append('<p class="small"> Date de l\'événement: ' + event.Event_date + '</li>');
+                                $events.append('<p class="small"> Coût de l\'événement: ' + event.Event_price + ' €</li>');
+                                $events.append('<p class="tiny"> L\'événement au lieu au : ' + event.Event_location + '</li>');
+                                $events.append('</div>')
                             });
                             events.innerHTML += '</div>';
 
