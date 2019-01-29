@@ -29,7 +29,7 @@
                             <p>{{ $errors->first('email') }}</p>
                             @endif
                           
-                            <div class="label ">
+                            <div class="label">
                               <label class="text-cesiBlue" for="password55">Mot De Passe</label>
                             </div>
                             <p><input type="password" name="password" placeholder="Mot de Passe"></p>  
