@@ -13,37 +13,16 @@
   </head>
 
   <body>
-      <div class="containt">
-          <div class="container">
-              <div class="wrap">
-                  <div class="toCenter">
-                      <div class="pad shadow selected">
-                          <form action="/connexion" id="contact-form" method="post"  class="wide center" data-ajax-form="true">
-                          <h3 id="ResponseContact-popUp" class="text-cesiBlue heavy-bottom">Connexion</h3>
-                          <div class="label ">
-                          {{  csrf_field() }}
-                          
-                          <label class="text-cesiBlue" for="email55">Adresse Email</label>
-                        </div>
-                          <p><input type="email" name="email" placeholder="Email" value="{{ old('email') }}"></p>
-                            @if($errors->has('email'))
-                            <p>{{ $errors->first('email') }}</p>
-                            @endif
-                          
-                            <div class="label">
-                              <label class="text-cesiBlue" for="password55">Mot De Passe</label>
-                            </div>
-                            <p><input type="password" name="password" placeholder="Mot de Passe"></p>  
-                            @if($errors->has('password'))
-                            <p>{{ $errors->first('password') }}</p>
-                            @endif
-                          <p><input type="submit" value="Se connecter"></p>   
-                        </form>
-                    </div>
-                </div>
-            </div>
+    <div class="containt">
+      <div class="container">
+        <div class="wrap">
+          <h2 class="toCenter text-cesiBlue heavy-bottom">La Rétrospective des évènements du BDE</h2>
+          <div class="toCenter">
+
+          </div>
         </div>
-    </div>
+      </div>
+  </div>
 </body>
 </html>
             @endsection
