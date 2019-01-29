@@ -67,6 +67,10 @@
                             <option value="25">Strasbourg</option>
                             <option value="26">Toulouse</option>
                         </select>
+                        <div>
+                        <input type="checkbox" id="CGU" name="CGU">
+                        <label for="CGU">J'ai lu et j'accepte les <a class="underline" href="http://127.0.0.1:8000/cgu.html">conditions générales d'utilisation</a></label></div>
+                        <a href="http://127.0.0.1:8000/mentions.html">Mentions légales</p>
                             <input class="button cesiBlue round btn margin-top-2 cropBottom" type="submit" value="M'inscrire">  
 
                 </form>
