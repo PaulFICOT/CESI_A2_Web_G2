@@ -1,4 +1,17 @@
 var $html = $('html');
+var connection = false;
+var password = true;
+var email = true;
+
+
+function Login() {
+  if (password && email = true) {
+    connection = true;
+    var url;
+
+
+  });
+});
 
 $(document).on("click","#mentions_legales, #connexion, #boite_idees, #Contact,",function()
        {
@@ -32,6 +45,7 @@ $(document).on("click","#mentions_legales, #connexion, #boite_idees, #Contact,",
                }, 50);
            }
        });
+
 
 $('.popupTrigger[data-popup-id]').on('click', function(){
     var popupID = $(this).data('popup-id');
