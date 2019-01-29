@@ -16,10 +16,10 @@ class InscriptionController extends Controller
                 /*Validation du formulaire */
                 /*dd($request);*/
             request()->validate([
-                'email' => ['required', 'email',],
+                'email' => ['required', 'email','regex:/^[a-zA-Z0-9_.+-]+@[viacesi]+\.[fr]+$/' ],
                 'FirstName' => ['required', 'string', 'max:50'],
                 'LastName' => ['required', 'string', 'max:50'],
-                'password' => ['required', 'confirmed', 'min:8'],
+                'password' => ['required', 'confirmed', 'min:8','regex:/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/'],
                 'password_confirmation' => ['required'],
                 /*'Centre' => [],*/
     ], [
@@ -33,7 +33,7 @@ class InscriptionController extends Controller
                 'User_firstname' => request('FirstName'),
                 'User_lastname' => request('LastName'),
                 'User_password' => bcrypt(request('password')), /*bcryptjs*/
-                /*$users->User_centre = request('Centre');*/
+                /*User_centre = request('Centre');*/
     ]);
                 return 'Vous vous êtes bien inscrit';
         }

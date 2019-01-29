@@ -108,10 +108,15 @@ img.produit {
 
 img.retro {
   width: 50%;
-  width: 50%;
+  height: 50%;
   border-radius: 10px;
   margin-top: 15px;
   margin-bottom: 15px;
+}
+
+img.logo {
+  width: 45%;
+  height: 100%;
 }
 
 /* typographie */
@@ -414,8 +419,11 @@ div#slider figure img {
 
 .filtre {
   position: absolute;
-  left: 5px;
+  left: 15px;
+  padding: 20px;
   font-size: 20px;
+  border: 1px solid ;
+  border-color: #4D75BB;
   text-align: center;
   background: #D4D4D4D4;
 }
@@ -678,6 +686,7 @@ div#slider figure img {
     margin-left: 16px;
     margin-right: 0px;
   }
+
   .button.big svg {
     width: 36px;
     height: 36px;
