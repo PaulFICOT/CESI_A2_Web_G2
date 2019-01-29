@@ -1,0 +1,56 @@
+[
+    {
+        "Id_user":1,
+        "User_firstname":"Paul",
+        "User_lastname":"FICOT",
+        "User_mail":"paul.ficot@viacesi.fr",
+        "User_password":"123456",
+        "User_status":"admin",
+        "User_isAdmin": true,
+        "Id_center":4
+    },
+    
+    {
+        "Id_user":2,
+        "User_firstname":"Axel",
+        "User_lastname":"SAUVAGE",
+        "User_mail":"axel.sauvage@viacesi.fr",
+        "User_password":"123456",
+        "User_status":"user",
+        "User_isAdmin": false,
+        "Id_center":4
+    },
+
+    {
+        "Id_user":3,
+        "User_firstname":"Nathan",
+        "User_lastname":"LAMBEC",
+        "User_mail":"nathan.lambec@viacesi.fr",
+        "User_password":"123456",
+        "User_status":"user",
+        "User_isAdmin": false,
+        "Id_center":4
+    },
+        
+    {
+        "Id_user":4,
+        "User_firstname":"Antoine",
+        "User_lastname":"DESRAMAUT",
+        "User_mail":"antoine.desramaut@viacesi.fr",
+        "User_password":"123456",
+        "User_status":"user",
+        "User_isAdmin": false,
+        "Id_center":4
+   },
+            
+    {
+        "Id_user":5,
+        "User_firstname":"Hugo",
+        "User_lastname":"DEVOYE",
+        "User_mail":"hugo.devoye@viacesi.fr",
+        "User_password":"123456",
+        "User_status":"user",
+        "User_isAdmin": false,
+        "Id_center":4
+    }
+]

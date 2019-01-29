@@ -39,7 +39,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 12//Adding routes
-app.use('http://localhost:3000/', Index);
+app.use('/', Index);
 app.use('/api', Api)
 
 app.use('/api/category', Categories);

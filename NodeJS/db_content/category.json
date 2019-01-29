@@ -1,0 +1,16 @@
+[
+    {
+        "Id_category":1,
+        "Category_type":"Textile"
+    },
+    
+    {
+        "Id_category":2,
+        "Category_type":"Divers"
+    },
+    
+    {
+        "Id_category":3,
+        "Category_type":"Vehicule"
+    }
+]

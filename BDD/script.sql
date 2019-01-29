@@ -24,11 +24,12 @@ ENGINE=InnoDB;
 
 CREATE TABLE Users(
         Id_user        INT  Auto_increment  NOT NULL ,
-        User_firstname VARCHAR (50) NOT NULL ,
-        User_lastname  VARCHAR (50) NOT NULL ,
-        User_mail      VARCHAR (50) NOT NULL ,
+        User_firstname VARCHAR (50)  NOT NULL ,
+        User_lastname  VARCHAR (50)  NOT NULL ,
+        User_mail      VARCHAR (50)  NOT NULL ,
         User_password  VARCHAR (255) NOT NULL ,
-        User_status    VARCHAR (10) NOT NULL ,
+        User_status    VARCHAR (10)  NOT NULL ,
+        User_isAdmin   BOOLEAN       NOT NULL,
         Id_center      INT NOT NULL,
         
         CONSTRAINT Users_PK PRIMARY KEY (Id_user),
@@ -53,12 +54,10 @@ CREATE TABLE Events(
         Event_period      VARCHAR (63) ,
         Event_location    VARCHAR (100),
         Id_user           INT NOT NULL ,
-        Id_user_Users     INT NOT NULL,
         
         CONSTRAINT Events_PK PRIMARY KEY (Id_event),
         
-        CONSTRAINT Events_Users_FK FOREIGN KEY (Id_user) REFERENCES Users(Id_user),
-        CONSTRAINT Events_Users0_FK FOREIGN KEY (Id_user_Users) REFERENCES Users(Id_user)
+        CONSTRAINT Events_Users_FK FOREIGN KEY (Id_user) REFERENCES Users(Id_user)
 )
 ENGINE=InnoDB;
 

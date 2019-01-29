@@ -1,0 +1,23 @@
+[
+    {
+        "Id_product":1,
+        "Product_name":"CESIMOBIL",
+        "Product_price":25,
+        "Product_description":"La voiture de vos rêves",
+        "Product_nbr_sold":300,
+        "Product_stock":100,
+        "Product_path_image":"cesimobil.jpg",
+        "Id_category":3
+    },
+    
+    {
+        "Id_product":2,
+        "Product_name":"Sweatshirt BDE CESI",
+        "Product_price":40,
+        "Product_description":"Sweat designé par le BDE CESI Arras",
+        "Product_nbr_sold":8,
+        "Product_stock":12,
+        "Product_path_image":"sweat_bde.jpg",
+        "Id_category":1
+    }
+]

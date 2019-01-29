@@ -1,0 +1,131 @@
+[
+    {
+        "Id_center":1,
+        "Center_name":"Aix-en-Provence"
+    },
+
+    {
+        "Id_center":2,
+        "Center_name":"Alger"
+    },
+
+    {
+        "Id_center":3,
+        "Center_name":"Angoulême"
+    },
+
+    {
+        "Id_center":4,
+        "Center_name":"Arraz"
+    },
+
+    {
+        "Id_center":5,
+        "Center_name":"Bordeaux"
+    },
+
+    {
+        "Id_center":6,
+        "Center_name":"Brest"
+    },
+
+    {
+        "Id_center":7,
+        "Center_name":"Caen"
+    },
+
+    {
+        "Id_center":8,
+        "Center_name":"Châteauroux"
+    },
+
+    {
+        "Id_center":9,
+        "Center_name":"Dijon"
+    },
+
+    {
+        "Id_center":10,
+        "Center_name":"Grenoble"
+    },
+
+    {
+        "Id_center":11,
+        "Center_name":"La Rochelle"
+    },
+
+    {
+        "Id_center":12,
+        "Center_name":"Le Mans"
+    },
+
+    {
+        "Id_center":13,
+        "Center_name":"Lille"
+    },
+
+    {
+        "Id_center":14,
+        "Center_name":"Lyon"
+    },
+
+    {
+        "Id_center":15,
+        "Center_name":"Montpellier"
+    },
+
+    {
+        "Id_center":16,
+        "Center_name":"Nancy"
+    },
+
+    {
+        "Id_center":17,
+        "Center_name":"Nantes"
+    },
+
+    {
+        "Id_center":18,
+        "Center_name":"Nice"
+    },
+
+    {
+        "Id_center":19,
+        "Center_name":"Orléans"
+    },
+    
+    {
+        "Id_center":20,
+        "Center_name":"Paris Nanterre"
+    },
+
+    {
+        "Id_center":21,
+        "Center_name":"Pau"
+    },
+
+    {
+        "Id_center":22,
+            "Center_name":"Reims"
+        },
+
+    {
+        "Id_center":23,
+        "Center_name":"Rouen"
+    },
+
+    {
+        "Id_center":24,
+        "Center_name":"Saint-Nazaire"
+    },
+
+    {
+        "Id_center":25,
+        "Center_name":"Strasbourg"
+    },
+
+    {
+        "Id_center":26,
+        "Center_name":"Toulouse"
+    }
+]
