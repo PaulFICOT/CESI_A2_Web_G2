@@ -10,7 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+ /*Site d' Accueil */
+Route::view('/', view('welcome'));
+    /*Page d'inscription*/
+Route::get('/inscription', 'InscriptionController@formulaire');
+/* Réception du formulaire d'inscription */
+Route::post('/inscription', 'InscriptionController@traitement');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/connexion', 'ConnexionController@formulaire');
+
+Route::post('/connexion', 'ConnexionController@traitement');
