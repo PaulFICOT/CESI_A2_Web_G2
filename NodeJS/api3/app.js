@@ -12,6 +12,7 @@ var Api = require('./routes/api')
 
 var Categories = require('./routes/Categories');
 var Centers = require('./routes/Centers');
+var Comments = require('./routes/Comments');
 var Contains = require('./routes/Contains');
 var Events = require('./routes/Events')
 var Likes = require('./routes/Likes');
@@ -44,6 +45,7 @@ app.use('/api', Api)
 
 app.use('/api/category', Categories);
 app.use('/api/center', Centers);
+app.use('/api/comment', Comments);
 app.use('/api/contain', Contains);
 app.use('/api/event', Events);
 app.use('/api/like', Likes);

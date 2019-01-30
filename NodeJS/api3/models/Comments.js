@@ -1,7 +1,7 @@
 var db = require('../dbconnection'); //reference of dbconnection.js  
 var Comments = {  
     getAllComments: function(callback) {  
-        return db.query("SELECT * FROM Comments", callback);  
+        return db.query("SELECT * FROM Comments JOIN photos ON photos.Id_photo = comment.Id_photo", callback);  
     },  
     getCommentsById: function(id, callback) {  
         return db.query("SELECT * FROM Comments WHERE Id_user=?", [id], callback);  

@@ -1,10 +1,10 @@
 var db = require('../dbconnection'); //reference of dbconnection.js  
 var Events = {  
     getAllEvents: function(callback) {  
-        return db.query("SELECT * FROM events", callback);  
+        return db.query("SELECT * FROM eventz JOIN users ON users.Id_users = eventz.Id_user", callback);  
     },  
     getEventsById: function(id, callback) {  
-        return db.query("SELECT * FROM events WHERE id_event=?", [id], callback);  
+        return db.query("SELECT * FROM JOIN users ON users.Id_users = eventz.Id_user eventz WHERE id_event=?", [id], callback);  
     },  
     addEvent: function(Events, callback) {  
         return db.query("INSERT INTO events(Event_title, Event_description, Event_approval, Event_date, Event_recurrence, Event_price, Event_period, Event_location, Id_user) VALUES(?,?,?,?,?,?,?,?,?)", [Events.Event_title, Events.Event_description, Events.Event_approval, Events.Event_date, Events.Event_recurrence, Events.Event_price, Events.Event_period, Events.Event_location, Events.Id_user], callback);  
