@@ -19,7 +19,7 @@ class InscriptionController extends Controller
                 'User_mail' => ['required', 'email','regex:/^[a-zA-Z0-9_.+-]+@[viacesi]+\.[fr]+$/' ],
                 'FirstName' => ['required', 'string', 'max:50'],
                 'LastName' => ['required', 'string', 'max:50'],
-                'User_password' => ['required', 'confirmed', 'min:8','regex:/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/'],
+                'password' => ['required', 'confirmed', 'min:8','regex:/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/'],
                 'password_confirmation' => ['required'],
                 'Location' => ['required'],
                 /*'Centre' => [],*/
@@ -33,7 +33,7 @@ class InscriptionController extends Controller
                 'User_mail' => request('User_mail'),
                 'User_firstname' => request('FirstName'),
                 'User_lastname' => request('LastName'),
-                'User_password' => bcrypt(request('User_password')), /*bcryptjs*/
+                'password' => bcrypt(request('password')), /*bcryptjs*/
                 'Id_center' => request('Location'),
                 /*User_centre = request('Centre');*/
     ]);

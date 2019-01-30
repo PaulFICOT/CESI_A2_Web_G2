@@ -36,7 +36,11 @@
                             @if($errors->has('password'))
                             <p>{{ $errors->first('password') }}</p>
                             @endif
-                          <p><input class="button cesiBlue round btn margin-top-2 cropBottom" type="submit" value="Se connecter"></p>   
+                          <p><input class="button cesiBlue round btn margin-top-2 cropBottom" type="submit" value="Se connecter"></p>
+                          <p>
+                              <p>Vous ne possèdez pas de compte ?</p>
+                              <a class ="button cesiBlue round btn margin-top-2 cropBottom" href="http://127.0.0.1:8000/inscription">S'inscrire</a>
+                          </p>
                         </form>
                     </div>
                 </div>

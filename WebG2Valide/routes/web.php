@@ -11,7 +11,7 @@
 |
 */
  /*Site d' Accueil */
-Route::get('/accueil', 'AccueilController@formulaire');
+Route::view('/', 'welcome');
     /*Page d'inscription*/
 Route::get('/inscription', 'InscriptionController@formulaire');
 /* Réception du formulaire d'inscription */
@@ -20,5 +20,9 @@ Route::post('/inscription', 'InscriptionController@traitement');
 Route::get('/connexion', 'ConnexionController@formulaire');
 
 Route::post('/connexion', 'ConnexionController@traitement');
+
+Route::view('/mon-compte', 'mon-compte');
+
+
 
 ?>

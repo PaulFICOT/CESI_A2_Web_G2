@@ -11,7 +11,7 @@ class users extends model implements Authenticatable
     
     use BasicAuthenticatable;
     
-    protected $fillable = ['User_mail','User_firstname','User_lastname','User_password'];
+    protected $fillable = ['User_mail','User_firstname','User_lastname','password'];
 
     /**
      * Get the password for the user.
@@ -20,6 +20,6 @@ class users extends model implements Authenticatable
      */
     public function getAuthPassword()
     {
-        return $this->User_password;
+        return $this->password;
     }
 };

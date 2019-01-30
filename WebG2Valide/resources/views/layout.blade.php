@@ -9,8 +9,14 @@
             @yield('content')
 
 <div class="links">
-                    <a href="http://127.0.0.1:8000/connexion">Se connecter</a>
-                    <a href="http://127.0.0.1:8000/inscription">S'inscrire</a>
+                    
+                    <footer class="cesiBlue">
+    <div class="grid center">
+      <div class="col-4-12 toCenter"><a href="mentions.html" target="_blank"><p class="tiny">Mentions Légales</p></a></div>
+      <div class="col-4-12 toCenter"><a><p class="tiny">Contactez-nous</p></a></div>
+      <div class="col-4-12 toCenter"><a href="conditions_ventes.html" target="_blank"><p class="tiny">Conditions générales de vente</p></a></div>
+    </div>
+    </footer>
                 </div>
             </div>
         </div>

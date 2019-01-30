@@ -29,9 +29,9 @@
                             <p>{{ $errors->first('LastName') }}</p>
                         @endif
                             <div class="label "><label class="text-cesiBlue" for="password">Mot de passe</label></div>
-                            <p><input class="stroke wide" type="password" name="User_password" placeholder="Mot de Passe"></p>  
-                        @if($errors->has('User_password'))
-                            <p>{{ $errors->first('User_password') }}</p>
+                            <p><input class="stroke wide" type="password" name="password" placeholder="Mot de Passe"></p>  
+                        @if($errors->has('password'))
+                            <p>{{ $errors->first('password') }}</p>
                         @endif
                             <div class="label "><label class="text-cesiBlue" for="password_confirmation">Mot de passe (Confirmation)</label></div>
                             <p><input class="stroke wide" type="password" name="password_confirmation" placeholder="Confirmation"></p>   
@@ -68,11 +68,10 @@
                             <option name="Location" value="26">Toulouse</option>
                         </select>
                         <div>
-                        <input type="checkbox" id="CGU" name="CGU">
-                        <label for="CGU">J'ai lu et j'accepte les <a class="underline" href="http://127.0.0.1:8000/cgu.html">conditions générales d'utilisation</a></label></div>
-                        <a href="http://127.0.0.1:8000/mentions.html">Mentions légales</p>
+                        
                             <input class="button cesiBlue round btn margin-top-2 cropBottom" type="submit" value="M'inscrire">  
-
+                            <p>Vous possèdez déjà un compte ?</p>
+                              <a class ="button cesiBlue round btn margin-top-2 cropBottom" href="http://127.0.0.1:8000/connexion">Se connecter</a>
                 </form>
             </div>
           </div>
