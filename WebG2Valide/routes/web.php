@@ -8,10 +8,10 @@
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 */
+ /*Site d' Accueil */
+Route::get('/accueil', 'AccueilController@formulaire');
 
-    /*Site d' Accueil */
-Route::view('/', view('welcome'));
-    /*Page d'inscription*/
+/*Page d'inscription*/
 Route::get('/inscription', 'InscriptionController@formulaire');
     /* Réception du formulaire d'inscription */
 Route::post('/inscription', 'InscriptionController@traitement');
