@@ -21,8 +21,8 @@ Route::get('/connexion', 'ConnexionController@formulaire');
     /* Réception du formulaire de connexion */
 Route::post('/connexion', 'ConnexionController@traitement');
 
-Route::view('/mon-compte', 'mon-compte');
+Route::get('/mon-compte', 'CompteController@connecte');
 
-
+Route::get('/deconnexion', 'CompteController@deconnexion');
 
 ?>

@@ -5,7 +5,7 @@
     <link href="css/site.css" rel="stylesheet">
     <script href="public/js/script.js" type="text/javascript"></script>
     <script href="public/js/jquery.js" type="text/javascript"></script>
-
+      @include('flash::message')
             @yield('content')
 
 <div class="links">
