@@ -38,34 +38,34 @@
                         @if($errors->has('password_confirmation'))
                             <p>{{ $errors->first('password_confirmation') }}</p>
                         @endif
-                            <div class="label "><label class="text-cesiBlue" for="email55">Centre</label></div>
-                        <select name="Centre CESI" size="1">
-                            <option value="1">Aix-en-Provence</option>
-                            <option value="2">Alger</option>
-                            <option value="3">Angoulème</option>
-                            <option selected value="4"> Arras</option>
-                            <option value="5">Bordeaux</option>
-                            <option value="6">Brest</option>
-                            <option value="7">Caen</option>
-                            <option value="8">Châteauroux</option>
-                            <option value="9">Dijon</option>
-                            <option value="10">Grenoble</option>
-                            <option value="11">La Rochelle</option>
-                            <option value="12">Le Mans</option>
-                            <option value="13">Lille</option>
-                            <option value="14">Lyon</option>
-                            <option value="15">Montpellier</option>
-                            <option value="16">Nancy</option>
-                            <option value="17">Nantes</option>
-                            <option value="18">Nice</option>
-                            <option value="19">Orléans</option>
-                            <option value="20">Paris Nanterre</option>
-                            <option value="21"> Pau</option>
-                            <option value="22">Reims</option>
-                            <option value="23">Rouen</option>
-                            <option value="24">Saint-Nazaire</option>
-                            <option value="25">Strasbourg</option>
-                            <option value="26">Toulouse</option>
+                            <div class="label "><label class="text-cesiBlue" for="Location">Centre</label></div>
+                        <select name="Location" size="1">
+                            <option name="Location" value="1">Aix-en-Provence</option>
+                            <option name="Location" value="2">Alger</option>
+                            <option name="Location" value="3">Angoulème</option>
+                            <option name="Location" selected value="4"> Arras</option>
+                            <option name="Location" value="5">Bordeaux</option>
+                            <option name="Location" value="6">Brest</option>
+                            <option name="Location" value="7">Caen</option>
+                            <option name="Location" value="8">Châteauroux</option>
+                            <option name="Location" value="9">Dijon</option>
+                            <option name="Location" value="10">Grenoble</option>
+                            <option name="Location" value="11">La Rochelle</option>
+                            <option name="Location" value="12">Le Mans</option>
+                            <option name="Location" value="13">Lille</option>
+                            <option name="Location" value="14">Lyon</option>
+                            <option name="Location" value="15">Montpellier</option>
+                            <option name="Location" value="16">Nancy</option>
+                            <option name="Location" value="17">Nantes</option>
+                            <option name="Location" value="18">Nice</option>
+                            <option name="Location" value="19">Orléans</option>
+                            <option name="Location" value="20">Paris Nanterre</option>
+                            <option name="Location" value="21"> Pau</option>
+                            <option name="Location" value="22">Reims</option>
+                            <option name="Location" value="23">Rouen</option>
+                            <option name="Location" value="24">Saint-Nazaire</option>
+                            <option name="Location" value="25">Strasbourg</option>
+                            <option name="Location" value="26">Toulouse</option>
                         </select>
                         <div>
                         <input type="checkbox" id="CGU" name="CGU">

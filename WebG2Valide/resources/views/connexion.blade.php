@@ -22,21 +22,21 @@
                           <div class="label ">
                           {{  csrf_field() }}
                           
-                          <label class="text-cesiBlue" for="email55">Adresse Email</label>
+                          <label class="text-cesiBlue" for="User_mail">Adresse Email</label>
                         </div>
-                          <p><input type="email" name="email" placeholder="Email" value="{{ old('email') }}"></p>
-                            @if($errors->has('email'))
-                            <p>{{ $errors->first('email') }}</p>
+                          <p><input type="email" name="User_mail" placeholder="Email" value="{{ old('email') }}"></p>
+                            @if($errors->has('User_mail'))
+                            <p>{{ $errors->first('User_mail') }}</p>
                             @endif
                           
                             <div class="label">
-                              <label class="text-cesiBlue" for="password55">Mot De Passe</label>
+                              <label class="text-cesiBlue" for="User_password">Mot De Passe</label>
                             </div>
-                            <p><input type="password" name="password" placeholder="Mot de Passe"></p>  
-                            @if($errors->has('password'))
-                            <p>{{ $errors->first('password') }}</p>
+                            <p><input type="password" name="User_password" placeholder="Mot de Passe"></p>  
+                            @if($errors->has('User_password'))
+                            <p>{{ $errors->first('User_password') }}</p>
                             @endif
-                          <p><input type="submit" value="Se connecter"></p>   
+                          <p><input class="button cesiBlue round btn margin-top-2 cropBottom" type="submit" value="Se connecter"></p>   
                         </form>
                     </div>
                 </div>
