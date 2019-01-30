@@ -24,17 +24,17 @@
                           
                           <label class="text-cesiBlue" for="User_mail">Adresse Email</label>
                         </div>
-                          <p><input type="email" name="User_mail" placeholder="Email" value="{{ old('email') }}"></p>
+                          <p><input type="email" name="User_mail" placeholder="Email" value="{{ old('User_mail') }}"></p>
                             @if($errors->has('User_mail'))
                             <p>{{ $errors->first('User_mail') }}</p>
                             @endif
                           
                             <div class="label">
-                              <label class="text-cesiBlue" for="User_password">Mot De Passe</label>
+                              <label class="text-cesiBlue" for="password">Mot De Passe</label>
                             </div>
-                            <p><input type="password" name="User_password" placeholder="Mot de Passe"></p>  
-                            @if($errors->has('User_password'))
-                            <p>{{ $errors->first('User_password') }}</p>
+                            <p><input type="password" name="password" placeholder="Mot de Passe"></p>  
+                            @if($errors->has('password'))
+                            <p>{{ $errors->first('password') }}</p>
                             @endif
                           <p><input class="button cesiBlue round btn margin-top-2 cropBottom" type="submit" value="Se connecter"></p>   
                         </form>

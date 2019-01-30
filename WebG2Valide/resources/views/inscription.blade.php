@@ -14,9 +14,9 @@
                     {{  csrf_field() }}
                     <h3 id="ResponseContact-popUp" class="text-cesiBlue heavy-bottom">Inscription</h3>
                     <div class="label cropTop"><label class="cropTop text-cesiBlue" for="email">Email </label></div>
-                    <p><input class="stroke wide" type="email" name="email" placeholder="Email" value="{{ old('email') }}"></p> 
-                        @if($errors->has('email'))
-                            <p>{{ $errors->first('email') }}</p>
+                    <p><input class="stroke wide" type="email" name="User_mail" placeholder="Email" value="{{ old('email') }}"></p> 
+                        @if($errors->has('User_mail'))
+                            <p>{{ $errors->first('User_mail') }}</p>
                         @endif
                             <div class="label cropTop"><label class="cropTop text-cesiBlue" for="FirstName">Prénom</label></div>
                             <p><input class="stroke wide" type="text" name="FirstName" placeholder="Prénom" value="{{ old('FirstName') }}"></p>
@@ -28,12 +28,12 @@
                         @if($errors->has('LastName'))
                             <p>{{ $errors->first('LastName') }}</p>
                         @endif
-                            <div class="label "><label class="text-cesiBlue" for="email55">Mot de passe</label></div>
-                            <p><input class="stroke wide" type="password" name="password" placeholder="Mot de Passe"></p>  
-                        @if($errors->has('password'))
-                            <p>{{ $errors->first('password') }}</p>
+                            <div class="label "><label class="text-cesiBlue" for="password">Mot de passe</label></div>
+                            <p><input class="stroke wide" type="password" name="User_password" placeholder="Mot de Passe"></p>  
+                        @if($errors->has('User_password'))
+                            <p>{{ $errors->first('User_password') }}</p>
                         @endif
-                            <div class="label "><label class="text-cesiBlue" for="password55">Mot de passe (Confirmation)</label></div>
+                            <div class="label "><label class="text-cesiBlue" for="password_confirmation">Mot de passe (Confirmation)</label></div>
                             <p><input class="stroke wide" type="password" name="password_confirmation" placeholder="Confirmation"></p>   
                         @if($errors->has('password_confirmation'))
                             <p>{{ $errors->first('password_confirmation') }}</p>
