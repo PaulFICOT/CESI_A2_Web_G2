@@ -9,8 +9,8 @@
             @yield('content')
 
 <div class="links">
-                    <a href="https://127.0.0.1:8000/connexion">Se connecter</a>
-                    <a href="https://127.0.0.1:8000/inscription">S'inscrire</a>
+                    <a href="http://127.0.0.1:8000/connexion">Se connecter</a>
+                    <a href="http://127.0.0.1:8000/inscription">S'inscrire</a>
                 </div>
             </div>
         </div>

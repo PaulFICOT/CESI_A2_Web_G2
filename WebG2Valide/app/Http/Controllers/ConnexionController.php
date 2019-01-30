@@ -15,14 +15,16 @@ class ConnexionController extends Controller
         {
 
             request()->validate([
-                'email'=> ['required', 'email'],
+                'User_mail'=> ['required','email'],
                 'password'=> ['required'],
             ]);
 
-            auth()->attempt([
-                'User_mail' => request('email'),
-                'User_password' => request('password'),
+            $resultat=auth()->attempt([
+                'User_mail' => request('User_mail'),
+                'password' => request('User_password'),
             ]);
+
+            var_dump(!$resultat);
 
             return 'Traitement formulaire connexion';
         }    

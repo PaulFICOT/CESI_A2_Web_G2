@@ -16,11 +16,12 @@ class InscriptionController extends Controller
                 /*Validation du formulaire */
                 /*dd($request);*/
             request()->validate([
-                'email' => ['required', 'email','regex:/^[a-zA-Z0-9_.+-]+@[viacesi]+\.[fr]+$/' ],
+                'User_mail' => ['required', 'email','regex:/^[a-zA-Z0-9_.+-]+@[viacesi]+\.[fr]+$/' ],
                 'FirstName' => ['required', 'string', 'max:50'],
                 'LastName' => ['required', 'string', 'max:50'],
-                'password' => ['required', 'confirmed', 'min:8','regex:/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/'],
+                'User_password' => ['required', 'confirmed', 'min:8','regex:/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/'],
                 'password_confirmation' => ['required'],
+                'Location' => ['required'],
                 /*'Centre' => [],*/
     ], [
                 'password.min' => 'Pour des raisons de sécurité, votre mot de passe doit faire au minimum :min caractères.'
@@ -29,10 +30,11 @@ class InscriptionController extends Controller
                 /*On définit les différents champs que l'utilisateur va entrer 
                 pour les envoyer dans la BDD dans l'ordre */
                 $users = users::create([
-                'User_mail' => request('email'),
+                'User_mail' => request('User_mail'),
                 'User_firstname' => request('FirstName'),
                 'User_lastname' => request('LastName'),
-                'User_password' => bcrypt(request('password')), /*bcryptjs*/
+                'User_password' => bcrypt(request('User_password')), /*bcryptjs*/
+                'Id_center' => request('Location'),
                 /*User_centre = request('Centre');*/
     ]);
                 return 'Vous vous êtes bien inscrit';
