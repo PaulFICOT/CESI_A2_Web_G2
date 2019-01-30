@@ -6,8 +6,8 @@
   <head>
     <meta charset="utf-8">
     <link href="css/site.css" rel="stylesheet">
-    <script href="js/script.js"></script>
-    <script href="js/jquery.js" ></script>
+    <script href="public/js/script.js"></script>
+    <script href="public/js/jquery.js" ></script>
     <title>BDE - Login</title>
   </head>
 

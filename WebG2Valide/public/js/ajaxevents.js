@@ -17,18 +17,13 @@ function yHandler(){
                         console.log(events);
                         if($.trim(events)){
                             $.each(events, function(i, event){
-                                $events.append('<h2 id="event"> Nom de l\'événement: ' + event.Event_title + '</h2>');
-                                $events.append('<p id="event"> Date de l\'événement: ' + event.Event_date + '</p>');
-                                $events.append(' id="event"> L\'événement au lieu au : ' + event.Event_location + '</li>');
-                                $events.append('<p id="event"> Coût de l\'événement: ' + event.Event_price + ' €</p>');
-                                $events.append('</div> <div id="slider" class="toCenter heavy-bottom"><figure>');
-                                $events.append('<a><img src="') + event.Id_photo + 'alt="evenement" class="retro"><a/>
-                                $events.append('</figure>');
-                                $events.append('<form method="POST" action="getdata.php" enctype="multipart/form-data">');
-                                $events.append('<input type="file" name="myimage">');
-                                $events.append('<input type="submit" name="submit_image" value="Upload">');
-                                $events.append('</form></div>');
-                                $events.append('<div class="toCenter" id="event"> </p>Description de l\'événement: ' + event.Event_description + '</p>');
+                                $events.append('<div class="pad shadow heavy-bottom">');
+                                $events.append('<p class="text-cesiBlue" id="event"> Nom de l\'événement: ' + event.Event_title + '</p>');
+                                $events.append('<p class="small" id="event"> Description de l\'événement: ' + event.Event_description + '</li>');
+                                $events.append('<p class="small"> Date de l\'événement: ' + event.Event_date + '</li>');
+                                $events.append('<p class="small"> Coût de l\'événement: ' + event.Event_price + ' €</li>');
+                                $events.append('<p class="tiny"> L\'événement au lieu au : ' + event.Event_location + '</li>');
+                                $events.append('</div>')
                             });
                             events.innerHTML += '</div>';
 
