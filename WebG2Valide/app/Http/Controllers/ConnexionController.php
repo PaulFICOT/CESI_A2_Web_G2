@@ -21,10 +21,10 @@ class ConnexionController extends Controller
 
             $resultat=auth()->attempt([
                 'User_mail' => request('User_mail'),
-                'password' => request('User_password'),
+                'password' => request('password'),
             ]);
 
-            var_dump(!$resultat);
+            var_dump($resultat);
 
             return 'Traitement formulaire connexion';
         }    
