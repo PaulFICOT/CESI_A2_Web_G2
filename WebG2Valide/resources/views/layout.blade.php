@@ -8,9 +8,6 @@
       @include('flash::message')
             @yield('content')
 
-    @include('flash::message')
-    @yield('content')
-
     <div class="links">
 
     <footer class="cesiBlue">
