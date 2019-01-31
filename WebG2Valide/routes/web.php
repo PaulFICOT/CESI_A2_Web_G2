@@ -29,4 +29,5 @@ Route::view('/mentions', 'mentions');
 
 Route::view('/cgu', 'cgu');
 
+Route::view('/cgv', 'cgv');
 ?>

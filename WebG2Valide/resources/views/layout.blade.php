@@ -14,7 +14,7 @@
     <div class="grid center">
       <div class="col-4-12 toCenter"><a href="http://127.0.0.1:8000/mentions" target="_blank"><p class="tiny">Mentions Légales</p></a></div>
       <div class="col-4-12 toCenter"><a href="mailto:paul.ficot@viacesi.fr"><p class="tiny">Contactez-nous</p></a></div>
-      <div class="col-4-12 toCenter"><a href="http://127.0.0.1:8000/cgu" target="_blank"><p class="tiny">Conditions générales de vente</p></a></div>
+      <div class="col-4-12 toCenter"><a href="http://127.0.0.1:8000/cgv" target="_blank"><p class="tiny">Conditions générales de vente</p></a></div>
     </div>
     </footer>
                 </div>
