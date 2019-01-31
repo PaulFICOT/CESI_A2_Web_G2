@@ -24,10 +24,10 @@
             <p class="small">CESI école d’ingénieurs Campus Arras 62000 Arras</p>
             
             <h4 class="text-cesiBlue">Hébergement du site</h4>
-            <p class="small">Site hébergé par 1and1</p>
-            <p class="small">Adresse postale : 1&1 Internet SARL 7, place de la Gare BP 70109 57201</p>
-            <p class="small">Sarreguemines Cedex</p>
-            <p class="small">Tel : 0970 808 911 (appel non surtaxé)</p>
+            <p class="small">Site hébergé par Hébergeur</p>
+            <p class="small">Adresse postale : Hébergeur Internet SARL 7, Place de la rue BP 12345 67890</p>
+            <p class="small">Ville Cedex</p>
+            <p class="small">Tel : 0123 456 789 (appel non surtaxé)</p>
             <p class="small">Mail : <a class="link" href="mailto:paul.ficot@viacesi.fr" target="_blank">paul.ficot@viacesi.fr</a></p>
             <p class="small">Site : <a class="link" href="http:/127.0.0.1" target="_blank">BDE CESI</a></p>
 

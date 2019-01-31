@@ -14,7 +14,7 @@ var Categories = require('./routes/Categories');
 var Centers = require('./routes/Centers');
 var Comments = require('./routes/Comments');
 var Contains = require('./routes/Contains');
-var Events = require('./routes/Events')
+var Eventz = require('./routes/Events')
 var Likes = require('./routes/Likes');
 var Orders = require('./routes/Orders');
 var Products = require('./routes/Products');
@@ -47,7 +47,7 @@ app.use('/api/category', Categories);
 app.use('/api/center', Centers);
 app.use('/api/comment', Comments);
 app.use('/api/contain', Contains);
-app.use('/api/event', Events);
+app.use('/api/event', Eventz);
 app.use('/api/like', Likes);
 app.use('/api/order', Orders);
 app.use('/api/product', Products);

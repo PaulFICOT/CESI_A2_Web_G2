@@ -19,10 +19,10 @@ function yHandler(){
                             $.each(events, function(i, event){
                                 $events.append('<h2 id="event"> Nom de l\'événement: ' + event.Event_title + '</h2>');
                                 $events.append('<p id="event"> Date de l\'événement: ' + event.Event_date + '</p>');
-                                $events.append(' id="event"> L\'événement au lieu au : ' + event.Event_location + '</li>');
+                                $events.append(' id="event"> L\'événement au lieu au/à : ' + event.Event_location + '</li>');
                                 $events.append('<p id="event"> Coût de l\'événement: ' + event.Event_price + ' €</p>');
                                 $events.append('</div> <div id="slider" class="toCenter heavy-bottom"><figure>');
-                                $events.append('<a><img src="') + event.Id_photo + 'alt="evenement" class="retro"><a/>
+                                $events.append('<a><img src="public/images/event' + event.Id_photo + 'alt="evenement" class="retro"><a/>');
                                 $events.append('</figure>');
                                 $events.append('<form method="POST" action="getdata.php" enctype="multipart/form-data">');
                                 $events.append('<input type="file" name="myimage">');

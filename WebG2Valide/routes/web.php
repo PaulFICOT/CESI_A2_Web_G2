@@ -49,4 +49,8 @@ Route::get('/evenements', 'EventsController@formulaire');
 Route::get('/boutique', 'BoutiqueController@formulaire');
     /*  */
 Route::post('/boutique', 'BoutiqueController@traitement');
+
+
+
+Route::view('/test', 'test');
 ?>
