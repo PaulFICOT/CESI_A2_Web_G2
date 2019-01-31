@@ -299,6 +299,13 @@ small .small {
   margin-bottom: 5px !important;
 }
 
+.alert {
+  font-size: 20px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  color: #4D75BB !important;
+}
+
  .heavy {
   margin-top : 60px !important;
   margin-bottom: 60px !important;
@@ -9064,3 +9071,4 @@ form input[type="email"].input-96 {
   clear: both;
   display: table;
 }
+
