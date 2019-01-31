@@ -2,6 +2,7 @@
 @section('content')
 </head>
 <body>
+    @extends('nav')
     <div class="section">
         <h1 class="title is-l">Mon compte</h1>
 
