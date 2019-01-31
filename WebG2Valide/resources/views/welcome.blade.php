@@ -13,12 +13,12 @@
     <nav class="cesiBlue top panel">
       <div class="sections desktop">
         <div class="left">
-          <a href="main.html"><img src="/images/logos/logo_cesi_noir.png" alt="logo" class="logo toLeft"></a>
+        <a href="http://127.0.0.1:8000/"><img src="images/logos/logo_cesi_noir.png" alt="logo" class="logo toLeft"></a>
         </div>
         <div class="center">
           <ul class="menu uppercase">
-            <li><a href="http://127.0.0.1:8000/evenements"><p.small>Rétrospective</p.small></a></li>
-            <li><a href="http://127.0.0.1:8000/boite-a-idee"><p.small>Boîte à idées</p.small></a></li>
+          <li><a href="http://127.0.0.1:8000/evenements"><p.small>Rétrospective</p.small></a></li>
+          <li><a href="http://127.0.0.1:8000/ideabox"><p.small>Boîte à idées</p.small></a></li>
             <li><a href="http://127.0.0.1:8000/boutique"><p.small>La Boutique</p.small></a></li>
           </ul>
         </div>
