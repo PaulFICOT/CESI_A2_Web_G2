@@ -1,8 +1,11 @@
-@extends('layout')
-
-@section('content')
-    
-        <title>BDE - Conditions générales d\'utilisation</title>
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="css/site.css" rel="stylesheet">
+    <script href="public/js/script.js" type="text/javascript"></script>
+    <script href="public/js/jquery.js" type="text/javascript"></script>
+<title>BDE - Conditions générales d\'utilisation</title>
     </head>
         <body>
          <div class="containt">
@@ -71,7 +74,6 @@
                     <li><p class="small">Le site exerce une modération a posteriori sur les publications et se réserve le droit de refuser leur mise en ligne</p></li>
                     <li><p class="small">Le membre reste titulaire de l\’intégralité de ses droits de propriété intellectuelle. Mais en publiant une publication sur le site, il cède à la société éditrice le droit non exclusif et gratuit de représenter, reproduire, adapter, modifier, diffuser et distribuer sa publication, directement ou par un tiers autorisé, dans le monde entier, sur tout support (numérique ou physique), pour la durée de la propriété intellectuelle. Le Membre cède notamment le droit d\'utiliser sa publication sur internet et sur les réseaux de téléphonie mobile.</p></li>
                     <li><p class="small">La société éditrice s' engage à faire figurer le nom du membre à proximité de chaque utilisation de sa publication.</p></li>
-        @endsection
                 </div>
                 </div>
             </div>
