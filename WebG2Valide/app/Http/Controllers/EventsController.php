@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class EventsController extends Controllers{
+class EventsController extends Controller{
 
     public function updateEvents(Request $request)
     {
