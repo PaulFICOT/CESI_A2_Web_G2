@@ -25,4 +25,8 @@ Route::get('/mon-compte', 'CompteController@connecte');
 
 Route::get('/deconnexion', 'CompteController@deconnexion');
 
+Route::view('/mentions', 'mentions');
+
+Route::view('/cgu', 'cgu');
+
 ?>
