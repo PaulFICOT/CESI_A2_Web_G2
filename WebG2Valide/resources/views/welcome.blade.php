@@ -27,9 +27,10 @@
           </ul>
         </div>
         <div class="right">
-            <a href="login.html"><img src="images/icones/power.png" alt="connexion" class="icone"></a>
-            <a><img src="images/icones/panier.png" alt="Panier" class="icone"></a>
-            <a><img src="images/icones/parametres.png" alt="Paramètres" class="icone"></a>
+            <a href="http://127.0.0.1/inscription"><img src="images/icones/inscription.png" alt="inscription" class="icone"></a>
+            <a href="http://127.0.0.1/connexion"><img src="images/icones/connexion.png" alt="connexion" class="icone"></a>
+            <a href="http://127.0.0.1/cart"><img src="images/icones/panier.png" alt="Panier" class="icone"></a>
+            <a href="http://127.0.0.1/mon-compte"><img src="images/icones/default_user_image.png" alt="mon compte" class="icone"></a>
         </div>
       </div>
     </nav>
