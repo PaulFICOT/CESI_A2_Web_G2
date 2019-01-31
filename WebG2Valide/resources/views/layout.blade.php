@@ -5,30 +5,11 @@
     <link href="css/site.css" rel="stylesheet">
     <script href="public/js/script.js" type="text/javascript"></script>
     <script href="public/js/jquery.js" type="text/javascript"></script>
-<<<<<<< HEAD
-      @include('flash::message')
-            @yield('content')
-
-            <div class="links">
-
-              <footer class="cesiBlue">
-                <div class="grid center">
-                  <div class="col-4-12 toCenter"><a href="http://127.0.0.1:8000/mentions" target="_blank"><p class="tiny">Mentions Légales</p></a></div>
-                  <div class="col-4-12 toCenter"><a href="mailto:paul.ficot@viacesi.fr"><p class="tiny">Contactez-nous</p></a></div>
-                  <div class="col-4-12 toCenter"><a href="http://127.0.0.1:8000/cgu" target="_blank"><p class="tiny">Conditions générales de vente</p></a></div>
-                </div>
-              </footer>
-              </div>
-          </div>
-        </div>
-    </body>
-</html>
-=======
     @include('flash::message')
     @yield('content')
-    
+
     <div class="links">
-      
+
     <footer class="cesiBlue">
       <div class="grid center">
         <div class="col-4-12 toCenter"><a href="http://127.0.0.1:8000/mentions" target="_blank"><p class="tiny">Mentions Légales</p></a></div>
@@ -37,8 +18,5 @@
       </div>
     </footer>
   </div>
-</div>
-</div>
 </body>
 </html>
->>>>>>> 865e4c3867021220d05df917aca8915420e4a58f
