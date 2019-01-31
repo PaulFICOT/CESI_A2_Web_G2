@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CompteController extends Controller
 {
     public function connecte() {
 
-        if (auth()->guest()) {
+        if(Auth::guest())  {
             return redirect('/connexion')->withErrors([
                 'User_mail' => "Vous devez être connecté pour voir cette page.",
             ]);
