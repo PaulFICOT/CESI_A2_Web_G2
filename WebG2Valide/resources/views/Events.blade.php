@@ -9,7 +9,7 @@
     <script href="public/js/script.js"></script>
     <script href="public/js/jquery.js" ></script>
     <script href="public/js/ajaxevents.js" ></script>
-    <title>BDE - Evenements</title>
+    <title>BDE - Évènements</title>
   </head>
 
   <body>
@@ -49,7 +49,7 @@
        <div class="col-4-12 toCenter"><a><p class="tiny">Contactez-nous</p></a></div>
        <div class="col-4-12 toCenter"><a href="conditions_ventes.html" target="_blank"><p class="tiny">Conditions générales de vente</p></a></div>
      </div>
-     </footer>
+  </footer>
 </body>
 </html>
             @endsection

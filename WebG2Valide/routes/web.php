@@ -34,4 +34,6 @@ Route::view('/cgv', 'cgv');
 Route::get('/ideabox', 'IdeaboxController@formulaire');
 
 Route::post('/ideabox', 'ideaboxController@traitement');
+
+
 ?>

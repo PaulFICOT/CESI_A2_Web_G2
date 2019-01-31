@@ -6,23 +6,21 @@
     <script href="public/js/script.js" type="text/javascript"></script>
     <script href="public/js/jquery.js" type="text/javascript"></script>
       @include('flash::message')
-            @yield('content')
-            @section('content')
-
-            <title>BDE - Conditions générales de vente</title>
-        </head>
-        <body>
-            <div class="containt">
-                <div class="container">
-                    <div class="wrap">
-                        <div class=" grid center">
-                            
+      @yield('content')
+      @section('content')
+      
+      <title>BDE - Conditions générales de vente</title>
+    </head>
+    <body>
+        <div class="containt">
+            <div class="container">
+                <div class="wrap">
+                    <div class=" grid center">
                         <h2 class="text-cesiBlue heavy-bottom">CONDITIONS GENERALES DE VENTE</h2>
-                        
+
                         <h4 class="text-cesiBlue">Clause n° 1 : Objet</h4>
                         <p class="small">Les conditions générales de vente décrites ci-après détaillent les droits et obligations de l’association BDE CESI ARRAS et de son client dans le cadre de la vente des marchandises suivantes : ... (le vendeur doit recenser les marchandises soumises aux CGV).</p>
                         <p class="small">Toute prestation accomplie par l’association BDE CESI ARRAS implique donc l'adhésion sans réserve de l'acheteur aux présentes conditions générales de vente.</p>
-
                         <h4 class="text-cesiBlue">Clause n° 2 : Prix</h4>
                         <p class="small">Les prix des marchandises vendues sont ceux en vigueur au jour de la prise de commande. Ils sont libellés en euros et calculés hors taxes. Par voie de conséquence, ils seront majorés du taux de TVA et des frais de transport applicables au jour de la commande.</p>
                         <p class="small">L’association BDE CESI ARRAS s'accorde le droit de modifier ses tarifs à tout moment. Toutefois, elle s'engage à facturer les marchandises commandées aux prix indiqués lors de l'enregistrement de la commande.</p>
@@ -67,10 +65,10 @@
                         <p class="small">Le risque du transport est supporté en totalité par l'acheteur. En cas de marchandises manquantes ou détériorées lors du transport, l'acheteur devra formuler toutes les réserves nécessaires sur le bon de commande à réception
                             desdites marchandises. Ces réserves devront être, en outre, confirmées par écrit dans les cinq jours suivant la livraison, par courrier recommandé AR.</p>
 
-                            <h4 class="text-cesiBlue heavy-top">Clause n° 6 : Retard de paiement</h4>
+                            <h4 class="text-cesiBlue heavy-top">Clause n° 8 : Retard de paiement</h4>
                             <p class="small">La responsabilité de l’association BDE CESI ARRAS ne pourra pas être mise en œuvre si la non-exécution ou le retard dans l'exécution de l'une de ses obligations décrites dans les présentes conditions générales de vente découle d'un cas de force majeure. À ce titre, la force majeure s'entend de tout événement extérieur, imprévisible et irrésistible au sens de l'article 1148 du Code civil.</p>
                             
-                            <h4 class="text-cesiBlue heavy-top">Clause n° 11 : Tribunal compétent</h4>
+                            <h4 class="text-cesiBlue heavy-top">Clause n° 9 : Tribunal compétent</h4>
                             <p class="small">Tout litige relatif à l'interprétation et à l'exécution des présentes conditions générales de vente est soumis au droit français.</p>
                             <p class="small">À défaut de résolution amiable, le litige sera porté devant le Tribunal de commerce 13 Rue Roger Salengro, 62000 Arras.</p>
                         </div>
