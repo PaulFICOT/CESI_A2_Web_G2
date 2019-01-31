@@ -29,9 +29,5 @@ class ConnexionController extends Controller
                 return back()->withInput()->withErrors([
                     'User_mail' => 'Vos identifiants sont incorrects.',
                 ]);
-
-            //return back()->withInput()->withErrors([
-            //    'User_mail' => 'Vos identifiants sont incorrects.'
-            //]);
         }
 }
