@@ -23,13 +23,15 @@ class ConnexionController extends Controller
                 'User_mail' => request('User_mail'),
                 'password' => request('password'),
             ]);
-
             if($resultat) {
                 return redirect('/mon-compte');
-            };
+            }
+                return back()->withInput()->withErrors([
+                    'User_mail' => 'Vos identifiants sont incorrects.',
+                ]);
 
-            return back()->withInput()->withErrors([
-                'User_mail' => 'Vos identifiants sont incorrects.'
-            ]);
-        }    
+            //return back()->withInput()->withErrors([
+            //    'User_mail' => 'Vos identifiants sont incorrects.'
+            //]);
+        }
 }
