@@ -6,11 +6,9 @@ use Illuminate\Http\Request;
 
 class EventsController extends Controller{
 
-    public function updateEvents(Request $request)
+    public function formulaire()
     {
-        $data = $request->all();
-
-        dd($data);
+        return view('Events');
     }
 }
 ?>
