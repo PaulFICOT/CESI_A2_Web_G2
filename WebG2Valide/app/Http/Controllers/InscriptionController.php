@@ -22,7 +22,6 @@ class InscriptionController extends Controller
                 'password' => ['required', 'confirmed', 'min:8','regex:/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/'],
                 'password_confirmation' => ['required'],
                 'Location' => ['required'],
-                /*'Centre' => [],*/
     ], [
                 'password.min' => 'Pour des raisons de sécurité, votre mot de passe doit faire au minimum :min caractères.'
     ]
@@ -30,13 +29,12 @@ class InscriptionController extends Controller
                 /*On définit les différents champs que l'utilisateur va entrer 
                 pour les envoyer dans la BDD dans l'ordre */
                 $users = users::create([
-                'User_mail' => request('User_mail'),
-                'User_firstname' => request('FirstName'),
-                'User_lastname' => request('LastName'),
-                'password' => bcrypt(request('password')), /*bcryptjs*/
-                'Id_center' => request('Location'),
-                /*User_centre = request('Centre');*/
-    ]);
+                    'User_mail' => request('User_mail'),
+                    'User_firstname' => request('FirstName'),
+                    'User_lastname' => request('LastName'),
+                    'password' => bcrypt(request('password')), /*bcryptjs*/
+                    'Id_center' => request('Location'),
+                    ]);
                 return 'Vous vous êtes bien inscrit';
         }
 }

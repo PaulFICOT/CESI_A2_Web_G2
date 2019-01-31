@@ -9,7 +9,7 @@
     <script href="public/js/script.js"></script>
     <script href="public/js/jquery.js" ></script>
     <script href="public/js/ajaxevents.js" ></script>
-    <title>BDE - Evenements</title>
+    <title>BDE - Évènements</title>
   </head>
 
   <body>

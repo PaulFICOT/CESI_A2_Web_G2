@@ -5,7 +5,7 @@
     <link href="css/site.css" rel="stylesheet">
     <script href="public/js/script.js" type="text/javascript"></script>
     <script href="public/js/jquery.js" type="text/javascript"></script>
-<title>BDE - Conditions générales d\'utilisation</title>
+<title>BDE - Conditions générales d'utilisation</title>
     </head>
         <body>
          <div class="containt">
