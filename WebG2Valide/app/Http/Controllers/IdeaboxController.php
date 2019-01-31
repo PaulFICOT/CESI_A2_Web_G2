@@ -9,4 +9,10 @@ class IdeaboxController extends Controller
     public function formulaire() {
         return view('ideabox');
     }
+
+    public function traitement()
+
+    request()->validate([
+        
+    ])
 }

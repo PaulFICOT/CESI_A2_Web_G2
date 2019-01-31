@@ -8,23 +8,28 @@ class CompteController extends Controller
 {
     public function connecte() {
 
-        // var_dump(auth()->guest());
-
         if (auth()->guest()) {
-
-           flash("Vous devez être connecté pour voir cette page.")->error();
-
-           return redirect('/connexion');
+            return redirect('/connexion')->withErrors([
+                'User_mail' => "Vous devez être connecté pour voir cette page.",
+            ]);
         }
 
-        return view('mon-compte');
-    }
+        //if (auth()->guest()) {
+
+           //flash("Vous devez être connecté pour voir cette page.")->error();
+
+        //   return redirect('/connexion');
+
+            return view('mon-compte');
+
+        }
+
     
-    public function deconnexion() {
-        auth()->logout();
+    //public function deconnexion() {
+    //    auth()->logout();
 
-        flash("Vous êtes maintenant déconnecté.")->success();
+        //flash("Vous êtes maintenant déconnecté.")->success();
 
-        return redirect('/');
-    }
+    //    return redirect('/');
+    //}
 }
