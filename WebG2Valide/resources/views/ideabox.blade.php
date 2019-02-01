@@ -91,4 +91,5 @@
         </div>
       </div>
     </div>
+    <script src="js/ideabox.js"></script>
 @endsection
