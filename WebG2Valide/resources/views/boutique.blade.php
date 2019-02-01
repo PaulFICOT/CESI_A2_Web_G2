@@ -37,8 +37,6 @@
         </div>
       </div>
     </div>
-    <script src="public/js/ajaxboutique.js">
-
-    </script>
+    <script src="public/js/ajaxboutique.js"></script>
   </body>
 @endsection
