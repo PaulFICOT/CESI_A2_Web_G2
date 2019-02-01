@@ -32,5 +32,5 @@
         return view('connexion');
     }
     }
-}è
+}
 ?>
