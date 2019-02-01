@@ -38,7 +38,7 @@
 #35 C:\\Users\\ooxoo\\OneDrive\\Documents\\EXIA\\A2\\Bloc WEB\\Projet WEB\\CESI_A2_Web_G2\\WebG2Valide\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #36 C:\\Users\\ooxoo\\OneDrive\\Documents\\EXIA\\A2\\Bloc WEB\\Projet WEB\\CESI_A2_Web_G2\\WebG2Valide\\server.php(21): require_once('C:\\\\Users\\\\ooxoo\\\\...')
 #37 {main}
-"} 
+"}
 [2019-01-31 21:54:29] local.ERROR: Method App\Http\Controllers\CompteController::accueil does not exist. {"exception":"[object] (BadMethodCallException(code: 0): Method App\\Http\\Controllers\\CompteController::accueil does not exist. at C:\\Users\\ooxoo\\OneDrive\\Documents\\EXIA\\A2\\Bloc WEB\\Projet WEB\\CESI_A2_Web_G2\\WebG2Valide\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php:68)
 [stacktrace]
 #0 [internal function]: Illuminate\\Routing\\Controller->__call('accueil', Array)
@@ -94,7 +94,7 @@
 #50 C:\\Users\\ooxoo\\OneDrive\\Documents\\EXIA\\A2\\Bloc WEB\\Projet WEB\\CESI_A2_Web_G2\\WebG2Valide\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #51 C:\\Users\\ooxoo\\OneDrive\\Documents\\EXIA\\A2\\Bloc WEB\\Projet WEB\\CESI_A2_Web_G2\\WebG2Valide\\server.php(21): require_once('C:\\\\Users\\\\ooxoo\\\\...')
 #52 {main}
-"} 
+"}
 [2019-01-31 22:04:49] local.ERROR: syntax error, unexpected '}', expecting ';' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '}', expecting ';' at C:\\Users\\ooxoo\\OneDrive\\Documents\\EXIA\\A2\\Bloc WEB\\Projet WEB\\CESI_A2_Web_G2\\WebG2Valide\\app\\Http\\Controllers\\CompteController.php:15)
 [stacktrace]
 #0 C:\\Users\\ooxoo\\OneDrive\\Documents\\EXIA\\A2\\Bloc WEB\\Projet WEB\\CESI_A2_Web_G2\\WebG2Valide\\vendor\\composer\\ClassLoader.php(322): Composer\\Autoload\\includeFile('C:\\\\Users\\\\ooxoo\\\\...')
@@ -135,4 +135,4 @@
 #35 C:\\Users\\ooxoo\\OneDrive\\Documents\\EXIA\\A2\\Bloc WEB\\Projet WEB\\CESI_A2_Web_G2\\WebG2Valide\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #36 C:\\Users\\ooxoo\\OneDrive\\Documents\\EXIA\\A2\\Bloc WEB\\Projet WEB\\CESI_A2_Web_G2\\WebG2Valide\\server.php(21): require_once('C:\\\\Users\\\\ooxoo\\\\...')
 #37 {main}
-"} 
+"}

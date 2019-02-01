@@ -1,5 +1,5 @@
-[2019-02-01 08:24:09] local.ERROR: SQLSTATE[HY000] [2002] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
- (SQL: select * from `users` where `User_mail` = nathan.lambec@viacesi.fr limit 1)  
+[2019-02-01 08:24:09] local.ERROR: SQLSTATE[HY000] [2002] Aucune connexion nï¿½a pu ï¿½tre ï¿½tablie car lï¿½ordinateur cible lï¿½a expressï¿½ment refusï¿½e.
+ (SQL: select * from `users` where `User_mail` = nathan.lambec@viacesi.fr limit 1)
 [2019-02-01 08:28:08] local.ERROR: syntax error, unexpected '}', expecting ';' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '}', expecting ';' at C:\\Users\\ooxoo\\OneDrive\\Documents\\EXIA\\A2\\Bloc WEB\\Projet WEB\\CESI_A2_Web_G2\\WebG2Valide\\app\\Http\\Controllers\\ConnexionController.php:28)
 [stacktrace]
 #0 C:\\Users\\ooxoo\\OneDrive\\Documents\\EXIA\\A2\\Bloc WEB\\Projet WEB\\CESI_A2_Web_G2\\WebG2Valide\\vendor\\composer\\ClassLoader.php(322): Composer\\Autoload\\includeFile('C:\\\\Users\\\\ooxoo\\\\...')
@@ -40,7 +40,7 @@
 #35 C:\\Users\\ooxoo\\OneDrive\\Documents\\EXIA\\A2\\Bloc WEB\\Projet WEB\\CESI_A2_Web_G2\\WebG2Valide\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #36 C:\\Users\\ooxoo\\OneDrive\\Documents\\EXIA\\A2\\Bloc WEB\\Projet WEB\\CESI_A2_Web_G2\\WebG2Valide\\server.php(21): require_once('C:\\\\Users\\\\ooxoo\\\\...')
 #37 {main}
-"} 
+"}
 [2019-02-01 10:43:26] local.ERROR: syntax error, unexpected '?>', expecting function (T_FUNCTION) or const (T_CONST) {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '?>', expecting function (T_FUNCTION) or const (T_CONST) at C:\\Users\\ooxoo\\OneDrive\\Documents\\EXIA\\A2\\Bloc WEB\\Projet WEB\\CESI_A2_Web_G2\\WebG2Valide\\app\\Http\\Controllers\\ConnexionController.php:36)
 [stacktrace]
 #0 C:\\Users\\ooxoo\\OneDrive\\Documents\\EXIA\\A2\\Bloc WEB\\Projet WEB\\CESI_A2_Web_G2\\WebG2Valide\\vendor\\composer\\ClassLoader.php(322): Composer\\Autoload\\includeFile('C:\\\\Users\\\\ooxoo\\\\...')
@@ -81,7 +81,7 @@
 #35 C:\\Users\\ooxoo\\OneDrive\\Documents\\EXIA\\A2\\Bloc WEB\\Projet WEB\\CESI_A2_Web_G2\\WebG2Valide\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #36 C:\\Users\\ooxoo\\OneDrive\\Documents\\EXIA\\A2\\Bloc WEB\\Projet WEB\\CESI_A2_Web_G2\\WebG2Valide\\server.php(21): require_once('C:\\\\Users\\\\ooxoo\\\\...')
 #37 {main}
-"} 
+"}
 [2019-02-01 10:59:34] local.ERROR: Method App\Http\Controllers\CompteController::deconnexion does not exist. {"exception":"[object] (BadMethodCallException(code: 0): Method App\\Http\\Controllers\\CompteController::deconnexion does not exist. at C:\\Users\\ooxoo\\OneDrive\\Documents\\EXIA\\A2\\Bloc WEB\\Projet WEB\\CESI_A2_Web_G2\\WebG2Valide\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php:68)
 [stacktrace]
 #0 [internal function]: Illuminate\\Routing\\Controller->__call('deconnexion', Array)
@@ -137,7 +137,7 @@
 #50 C:\\Users\\ooxoo\\OneDrive\\Documents\\EXIA\\A2\\Bloc WEB\\Projet WEB\\CESI_A2_Web_G2\\WebG2Valide\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #51 C:\\Users\\ooxoo\\OneDrive\\Documents\\EXIA\\A2\\Bloc WEB\\Projet WEB\\CESI_A2_Web_G2\\WebG2Valide\\server.php(21): require_once('C:\\\\Users\\\\ooxoo\\\\...')
 #52 {main}
-"} 
+"}
 [2019-02-01 11:04:28] local.ERROR: Method App\Http\Controllers\CompteController::deconnexion does not exist. {"exception":"[object] (BadMethodCallException(code: 0): Method App\\Http\\Controllers\\CompteController::deconnexion does not exist. at C:\\Users\\ooxoo\\OneDrive\\Documents\\EXIA\\A2\\Bloc WEB\\Projet WEB\\CESI_A2_Web_G2\\WebG2Valide\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php:68)
 [stacktrace]
 #0 [internal function]: Illuminate\\Routing\\Controller->__call('deconnexion', Array)
@@ -193,7 +193,7 @@
 #50 C:\\Users\\ooxoo\\OneDrive\\Documents\\EXIA\\A2\\Bloc WEB\\Projet WEB\\CESI_A2_Web_G2\\WebG2Valide\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #51 C:\\Users\\ooxoo\\OneDrive\\Documents\\EXIA\\A2\\Bloc WEB\\Projet WEB\\CESI_A2_Web_G2\\WebG2Valide\\server.php(21): require_once('C:\\\\Users\\\\ooxoo\\\\...')
 #52 {main}
-"} 
+"}
 [2019-02-01 11:04:35] local.ERROR: Method App\Http\Controllers\CompteController::deconnexion does not exist. {"exception":"[object] (BadMethodCallException(code: 0): Method App\\Http\\Controllers\\CompteController::deconnexion does not exist. at C:\\Users\\ooxoo\\OneDrive\\Documents\\EXIA\\A2\\Bloc WEB\\Projet WEB\\CESI_A2_Web_G2\\WebG2Valide\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php:68)
 [stacktrace]
 #0 [internal function]: Illuminate\\Routing\\Controller->__call('deconnexion', Array)
@@ -249,4 +249,4 @@
 #50 C:\\Users\\ooxoo\\OneDrive\\Documents\\EXIA\\A2\\Bloc WEB\\Projet WEB\\CESI_A2_Web_G2\\WebG2Valide\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #51 C:\\Users\\ooxoo\\OneDrive\\Documents\\EXIA\\A2\\Bloc WEB\\Projet WEB\\CESI_A2_Web_G2\\WebG2Valide\\server.php(21): require_once('C:\\\\Users\\\\ooxoo\\\\...')
 #52 {main}
-"} 
+"}
