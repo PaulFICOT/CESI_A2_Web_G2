@@ -8,31 +8,37 @@ use Illuminate\Support\Facades\Auth;
 class CompteController extends Controller
 {
     public function connecte() {
+// On utilise la variable $resultat qui contient 
+// le résultat de notre connexion pour poser une condition selon le succès ou 
+// l'échec de la connexion
 
         if($resultat == false)  {
             return redirect('/connexion')->withErrors([
-                'User_mail' => "Vous devez être connecté pour voir cette page.",
+                'User_mail' => "Vos identifiants sont incorrects.",
             ]);
-        }
+        }else {
+                return view('mon-compte');
+             } 
 
-        //if (auth()->guest()) {
+        if (auth()->guest()) {
 
-           //flash("Vous devez être connecté pour voir cette page.")->error();
+        flash("Vous devez être connecté pour voir cette page.")->error();
 
-        //   return redirect('/connexion');
+           return redirect('/connexion');
 
-            if($resultat == true) {
+        if($resultat == true) {
                return view('mon-compte');
             } 
 
         }
+    }
 
     
-    //public function deconnexion() {
-    //    auth()->logout();
+    public function deconnexion() {
+        auth()->logout();
 
-        //flash("Vous êtes maintenant déconnecté.")->success();
+            flash("Vous êtes maintenant déconnecté.")->success();
 
-    //    return redirect('/');
-    //}
+        return redirect('/');
+    }
 }
