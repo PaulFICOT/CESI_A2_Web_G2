@@ -68,7 +68,7 @@
                                 <option name="Location" value="26">Toulouse</option>
                             </select>
                             <p><input type="checkbox" required id="checkcgu" for="checkcgu">
-                            J'accepte les <a href"http://127.0.0.1:8000/cgu">Conditions Générales d'Utilisation</a>
+                            J'accepte les <a href="http://127.0.0.1:8000/cgu">Conditions Générales d'Utilisation</a>
                             </p>
                             <div>
                                 
