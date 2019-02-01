@@ -21,7 +21,7 @@ function yHandler(){
                                 $produits.append('<p class="text-cesiBlue" id="produit"> Nom du produit : ' + produit.Product_name + '</p>');
                                 $produits.append('<p class="small"> Coût du produit : ' + produit.Product_price + ' €</p>');
                                 $produits.append('<p class="small"> Description du produit : ' + produit.Product_description + ' €</p>');
-                                $produits.append('<a class="button round">Acheter</p>');
+                                $produits.append('<a class="button round" onclick="">Acheter</p>');
                                 $produits.innerHTML('</div>');
                             });
                             $produits.innerHTML += '</div>';
