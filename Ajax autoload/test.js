@@ -12,14 +12,14 @@ function yHandler(){
                 var $events = $('#events');
                 $.ajax({
                     type: 'GET',
-                    url: 'http://localhost:3000/api/event/' + $id,
+                    url: 'http://127.0.0.1:3000/api/event/' + $id,
                     success: function(events) {
                         console.log(events);
                         if($.trim(events)){
                             $.each(events, function(i, event){
                                 $events.append('<h2 id="event"> Nom de l\'événement: ' + event.Event_title + '</h2>');
                                 $events.append('<p id="event"> Date de l\'événement: ' + event.Event_date + '</p>');
-                                $events.append(' id="event"> L\'événement au lieu au/à : ' + event.Event_location + '</li>');
+                                $events.append('<li>id="event"> L\'événement au lieu au/à : ' + event.Event_location + '</li>');
                                 $events.append('<p id="event"> Coût de l\'événement: ' + event.Event_price + ' €</p>');
                                 $events.innerHTML('</div> <div id="slider" class="toCenter heavy-bottom"><figure>');
                                 $events.append('<a><img src="public/images/event' + event.Id_photo + 'alt="evenement" class="retro"><a/>');

@@ -12,8 +12,7 @@
             <ul id="event">
             </ul>
         </div>
-        <script src="public/js/ajaxevents.js" ></script>
+        
+        <script src="js/events.js" ></script>
     </body>
-    
-</html>
 @endsection
