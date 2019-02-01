@@ -10,9 +10,4 @@ class IdeaboxController extends Controller
         return view('ideabox');
     }
 
-    public function traitement()
-
-    request()->validate([
-        
-    ])
 }

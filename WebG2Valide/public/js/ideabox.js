@@ -15,19 +15,17 @@ function yHandler(){
                     //GET request
                     type: 'GET',
                     //URL of the REST API + id
-                    url: 'http://127.0.0.1:3000/api/event/' + $id,
+                    url: 'http://127.0.0.1:3000/api/Idea/' + $id,
                     success: function(events) {
                         console.log(events);
                         if($.trim(events)){
                             $.each(events, function(i, event){
                                 //Display the content
-                                $events.append('<h2 id="event"> Nom de l\'événement: ' + event.Event_title + '</h2>');
+                                $events.append('<h2 class="event"> Nom de l\'idée: ' + event.Event_title + '</h2>');
                                 $events.append('<p class="event">L\'événement aura lieu le x&: ' + event.Event_date + '</p>');
-                                $events.append('<li class="event"> L\'événement au lieu au/à : ' + event.Event_location + '</li>');
+                                $events.append('<p class="event"> L\'événement au lieu au/à : ' + event.Event_location + '</p>');
                                 $events.append('<p class="event"> Coût de l\'événement: ' + event.Event_price + ' €</p>');
-                                $events.append('</div> <div id="slider" class="toCenter heavy-bottom"><figure>');                                $events.append('</figure>');
-                                $events.append('</div>');
-                                $events.append('<div class="toCenter" id="event"> </p>Description de l\'événement: ' + event.Event_description + '</p>');
+                                $events.append('</p class="eve>Description de l\'événement: ' + event.Event_description + '</p>');
                             });
                             events.append += '</div>';
                             console.log(id)
