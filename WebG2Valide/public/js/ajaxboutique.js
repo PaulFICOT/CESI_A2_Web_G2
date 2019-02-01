@@ -5,7 +5,7 @@ function yHandler(){
     var y = yOffset + window.innerHeight;
 
     if(y >= contentHeight) {
-        $produits.innerHTML += '<div class="event">';
+        $produits.innerHTML += '<div class="produit">';
         for(i = 1; i<3; i++){
             // Ajax call
             $(function (){
@@ -18,9 +18,9 @@ function yHandler(){
                         if($.trim(produits)){
                             $.each(produits, function(i, produit){
                                 $produits.innerHTML('<div class="pad shadow heavy-bottom">');
-                                $produits.append('<p class="text-cesiBlue" id="produit"> Nom du produit : ' + produit.Product_name + '</p>');
-                                $produits.append('<p class="small"> Coût du produit : ' + produit.Product_price + ' €</p>');
-                                $produits.append('<p class="small"> Description du produit : ' + produit.Product_description + ' €</p>');
+                                $produits.append('<p class="text-cesiBlue" id="produits"> Nom du produit : ' + produit.Product_name + '</p>');
+                                $produits.append('<p class="small" id="produits"> Coût du produit : ' + produit.Product_price + ' €</p>');
+                                $produits.append('<p class="small" id="produits"> Description du produit : ' + produit.Product_description + ' €</p>');
                                 $produits.append('<a class="button round" onclick="">Acheter</p>');
                                 $produits.innerHTML('</div>');
                             });
