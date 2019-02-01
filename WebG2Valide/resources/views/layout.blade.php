@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <link href="css/site.css" rel="stylesheet">
-    <script src="js/script.js"></script>
     <script src="js/jquery.js"></script>
       @include('flash::message')
             @yield('content')

@@ -9,7 +9,7 @@ class CompteController extends Controller
 {
     public function connecte() {
 
-        if(Auth::guest())  {
+        if($resultat == false)  {
             return redirect('/connexion')->withErrors([
                 'User_mail' => "Vous devez être connecté pour voir cette page.",
             ]);
@@ -21,7 +21,9 @@ class CompteController extends Controller
 
         //   return redirect('/connexion');
 
-            return view('mon-compte');
+            if($resultat == true) {
+               return view('mon-compte');
+            } 
 
         }
 

@@ -6,10 +6,10 @@ function yHandler(){
 
     if(y >= contentHeight) {
         $produits.innerHTML += '<div class="produit">';
-        for(i = 1; i<6; i++){
+        for(i = 1; i<3; i++){
             // Ajax call
             $(function (){
-                var $produits = $('#produit');
+                var $produits = $('#products');
                 $.ajax({
                     type: 'GET',
                     url: 'http://localhost:3000/api/product/' + $id,
