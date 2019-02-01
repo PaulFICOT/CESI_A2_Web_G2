@@ -17,7 +17,7 @@
         </div>
         <div class="center">
           <ul class="menu uppercase">
-          <li><a href="http://127.0.0.1:8000/evenements"><p.small>Rétrospective</p.small></a></li>
+          <li><a href="http://127.0.0.1:8000/evenements"><p.small>Évènement</p.small></a></li>
           <li><a href="http://127.0.0.1:8000/ideabox"><p.small>Boîte à idées</p.small></a></li>
             <li><a href="http://127.0.0.1:8000/boutique"><p.small>La Boutique</p.small></a></li>
           </ul>
@@ -41,10 +41,10 @@
               <h2 class="text-cesiBlue">Actualités</h2>
               <div id="slider" class="toCenter">
                 <figure>
-                  <a><img src="images/event1.jpg" alt="évènement 1"></a>
-                  <a><img src="images/event2.jpg" alt="évènement 2"></a>
-                  <a><img src="images/event3.jpg" alt="évènement 3"></a>
-                  <a><img src="images/event4.jpg" alt="évènement 4"></a>
+                  <a><img src="images/evenements/event1.jpg" alt="évènement 1"></a>
+                  <a><img src="images/evenements/event2.jpg" alt="évènement 2"></a>
+                  <a><img src="images/evenements/event3.jpg" alt="évènement 3"></a>
+                  <a><img src="images/evenements/event4.jpg" alt="évènement 4"></a>
                 </figure>
               </div>
             </div>
@@ -54,35 +54,35 @@
               <div class="col-6-12 toLeft">
                 <div class="pad shadow heavy-bottom">
                   <a><p class="text-cesiBlue">Titre Evènement</p></a>
-                  <img src="images/event1.jpg" class="retro" alt="Image évènement">
+                  <img src="images/evenements/event1.jpg" class="retro" alt="Image évènement">
                   <p class="small">Date</p>
                   <p class="small">Lieu</p>
                   <p class="tiny">Description de l'évènement</p>
                   </div>
                   <div class="pad shadow heavy-bottom">
                     <a><p class="text-cesiBlue">Titre Evènement</p></a>
-                    <img src="images/event1.jpg" class="retro" alt="Image évènement">
+                    <img src="images/evenements/event1.jpg" class="retro" alt="Image évènement">
                     <p class="small">Date</p>
                     <p class="small">Lieu</p>
                     <p class="tiny">Description de l'évènement</p>
                     </div>
                   <div class="pad shadow heavy-bottom">
                     <a><p class="text-cesiBlue">Titre Evènement</p></a>
-                    <img src="images/event1.jpg" class="retro" alt="Image évènement">
+                    <img src="images/evenements/event1.jpg" class="retro" alt="Image évènement">
                     <p class="small">Date</p>
                     <p class="small">Lieu</p>
                     <p class="tiny">Description de l'évènement</p>
                   </div>
                   <div class="pad shadow heavy-bottom">
                     <a><p class="text-cesiBlue">Titre Evènement</p></a>
-                    <img src="images/event1.jpg" class="retro" alt="Image évènement">
+                    <img src="images/evenements/event1.jpg" class="retro" alt="Image évènement">
                     <p class="small">Date</p>
                     <p class="small">Lieu</p>
                     <p class="tiny">Description de l'évènement</p>
                   </div>
                   <div class="pad shadow heavy-bottom">
                     <a><p class="text-cesiBlue">Titre Evènement</p></a>
-                    <img src="images/event1.jpg" class="retro" alt="Image évènement">
+                    <img src="images/evenements/event1.jpg" class="retro" alt="Image évènement">
                     <p class="small">Date</p>
                     <p class="small">Lieu</p>
                     <p class="tiny">Description de l'évènement</p>
@@ -91,35 +91,35 @@
               <div class="col-6-12 toRight">
                 <div class="pad shadow heavy-bottom">
                   <a><p class="text-cesiBlue">Titre Evènement</p></a>
-                  <img src="images/event1.jpg" class="retro" alt="Image évènement">
+                  <img src="images/evenements/event1.jpg" class="retro" alt="Image évènement">
                   <p class="small">Date</p>
                   <p class="small">Lieu</p>
                   <p class="tiny">Description de l'évènement</p>
                 </div>
                 <div class="pad shadow heavy-bottom">
                   <a><p class="text-cesiBlue">Titre Evènement</p></a>
-                  <img src="images/event1.jpg" class="retro" alt="Image évènement">
+                  <img src="images/evenements/event1.jpg" class="retro" alt="Image évènement">
                   <p class="small">Date</p>
                   <p class="small">Lieu</p>
                   <p class="tiny">Description de l'évènement</p>
                 </div>
                 <div class="pad shadow heavy-bottom">
                   <a><p class="text-cesiBlue">Titre Evènement</p></a>
-                  <img src="images/event1.jpg" class="retro" alt="Image évènement">
+                  <img src="images/evenements/event1.jpg" class="retro" alt="Image évènement">
                   <p class="small">Date</p>
                   <p class="small">Lieu</p>
                   <p class="tiny">Description de l'évènement</p>
                 </div>
                 <div class="pad shadow heavy-bottom">
                   <a><p class="text-cesiBlue">Titre Evènement</p></a>
-                  <img src="images/event1.jpg" class="retro" alt="Image évènement">
+                  <img src="images/evenements/event1.jpg" class="retro" alt="Image évènement">
                   <p class="small">Date</p>
                   <p class="small">Lieu</p>
                   <p class="tiny">Description de l'évènement</p>
                 </div>
                 <div class="pad shadow heavy-bottom">
                   <a><p class="text-cesiBlue">Titre Evènement</p></a>
-                  <img src="images/event1.jpg" class="retro" alt="Image évènement">
+                  <img src="images/evenements/event1.jpg" class="retro" alt="Image évènement">
                   <p class="small">Date</p>
                   <p class="small">Lieu</p>
                   <p class="tiny">Description de l'évènement</p>
