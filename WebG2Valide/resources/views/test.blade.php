@@ -3,9 +3,10 @@
 
 </head>
 <body>
-    @extends('nav')
     <h1>AJAX</h1>
-    
+
+    <h2>Events via API</h2>
+
     <div id="status">_ | _</div>
         <div id="events">
 
