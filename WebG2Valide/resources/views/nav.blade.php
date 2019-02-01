@@ -5,7 +5,7 @@
         </div>
         <div class="center">
           <ul class="menu uppercase">
-          <li><a href="http://127.0.0.1:8000/evenements"><p.small>Rétrospective</p.small></a></li>
+          <li><a href="http://127.0.0.1:8000/evenements"><p.small>Évènements</p.small></a></li>
           <li><a href="http://127.0.0.1:8000/ideabox"><p.small>Boîte à idées</p.small></a></li>
             <li><a href="http://127.0.0.1:8000/boutique"><p.small>La Boutique</p.small></a></li>
           </ul>
