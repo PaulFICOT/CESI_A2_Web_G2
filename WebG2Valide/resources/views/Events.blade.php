@@ -14,6 +14,6 @@
         </div>
       </div>
   </div>
-  <script src="public/js/ajaxevents.js" ></script>
+  <script src="js/events.js" ></script>
   </body>
 @endsection
