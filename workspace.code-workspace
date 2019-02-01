@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "NodeJS\\api3"
+		},
+		{
+			"path": "NodeJS\\db_content"
+		},
+		{
+			"path": "Site frontend"
+		},
+		{
+			"path": "WebG2Valide"
+		},
+		{
+			"path": "Ajax autoload"
+		}
+	],
+	"settings": {}
+}

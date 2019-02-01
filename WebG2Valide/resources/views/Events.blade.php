@@ -1,40 +1,19 @@
 @extends('layout')
 @section('content')
-<script href="public/js/ajaxevents.js" ></script>
     <title>BDE - Évènements</title>
   </head>
-
   <body>
-    <nav class="cesiBlue top panel">
-      <div class="sections desktop">
-        <div class="left">
-            <a href="main.html"><img src="images/logos/logo_cesi_noir.png" alt="logo" class="logo toLeft"></a>
-        </div>
-        <div class="center">
-          <ul class="menu uppercase">
-            <li><a href="retro.html"><p.small>Rétrospective</p.small></a></li>
-            <li><a href="boite_idees.html"><p.small>Boîte à idées</p.small></a></li>
-            <li><a href="boutique.html"><p.small>La Boutique</p.small></a></li>
-          </ul>
-        </div>
-        <div class="right">
-          <a href="http://127.0.0.1:8000/inscription"><img src="images/icones/inscription.png" alt="inscription" class="icone"></a>
-          <a href="http://127.0.0.1:8000/connexion"><img src="images/icones/connexion.png" alt="connexion" class="icone"></a>
-          <a href="http://127.0.0.1:8000/cart"><img src="images/icones/panier.png" alt="Panier" class="icone"></a>
-          <a href="http://127.0.0.1:8000/mon-compte"><img src="images/icones/default_user_image.png" alt="mon compte" class="icone"></a>
-        </div>
-      </div>
-    </nav>
-
+    @extends('nav')
     <div class="containt">
       <div class="container">
         <div class="wrap">
-          <h2 class="toCenter text-cesiBlue heavy-bottom">La Rétrospective des évènements du BDE</h2>
+          <h2 class="toCenter text-cesiBlue heavy-bottom">La rétrospective des évènements du BDE</h2>
           <div class="toCenter">
 
           </div>
         </div>
       </div>
   </div>
+  <script src="public/js/ajaxevents.js" ></script>
   </body>
 @endsection
