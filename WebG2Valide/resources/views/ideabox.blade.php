@@ -4,25 +4,7 @@
 <title>BDE - Boîte à idées</title>
   </head>
   <body>
-    <nav class="cesiBlue top panel">
-      <div class="sections desktop">
-        <div class="left">
-          <a href="http://127.0.0.1:8000/"><img src="images/logos/logo_cesi_noir.png" alt="logo" class="logo toLeft"></a>
-        </div>
-        <div class="center">
-          <ul class="menu uppercase">
-            <li><a href="retro.html"><p.small>Rétrospective</p.small></a></li>
-            <li><a href="http://127.0.0.1:8000/ideabox"><p.small>Boîte à idées</p.small></a></li>
-            <li><a href="boutique.html"><p.small>La Boutique</p.small></a></li>
-          </ul>
-        </div>
-        <div class="right">
-            <a href="login.html"><img src="images/icones/power.png" alt="connexion" class="icone"></a>
-            <a><img src="images/icones/panier.png" alt="Panier" class="icone"></a>
-            <a><img src="images/icones/parametres.png" alt="Paramètres" class="icone"></a>
-        </div>
-      </div>
-    </nav>
+    @extends('nav')
     <div class="containt">
       <div class="container">
         <div class="wrap">
