@@ -19,7 +19,7 @@ function yHandler(){
                             $.each(produits, function(i, produit){
                                 $produits.innerHTML('<div class="pad shadow heavy-bottom">');
                                 $produits.append('<p class="text-cesiBlue" id="produits"> Nom du produit : ' + produit.Product_name + '</p>');
-                                $produits.append('<p class="small" id="produits"> Coût du produit : ' + produit.Product_price + ' €</p>');
+                                $produits.append('<p class="price " id="produits"> Coût du produit : ' + produit.Product_price + ' €</p>');
                                 $produits.append('<p class="small" id="produits"> Description du produit : ' + produit.Product_description + ' €</p>');
                                 $produits.append('<a class="button round" onclick="">Acheter</p>');
                                 $produits.innerHTML('</div>');
