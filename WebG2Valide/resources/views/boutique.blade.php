@@ -11,9 +11,7 @@
             <h2 class="text-cesiBlue">La Boutique BDE</h2>
             <h4 class="text-cesiBlue heavy">Les Articles</h4>
           </div>
-
           
-
           <div class="toCenter">
             <h4 class="text-cesiBlue heavy">Les Articles Recommandés</h4>
           </div>
