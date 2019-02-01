@@ -25,7 +25,7 @@
     ]);
 
     //var_dump($resultat);
-
+// Si la connexion réussi envoie vers la page mon-compte sinon ramène a nouveau vers la page de connexion
     if($resultat == true) {
         return view('mon-compte');
     }else {

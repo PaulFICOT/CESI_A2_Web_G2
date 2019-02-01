@@ -1,7 +1,7 @@
 var db = require('../dbconnection'); //reference of dbconnection.js  
 var Eventz = {  
     getAllEvents: function(callback) {  
-        return db.query("SELECT * FROM eventz JOIN users ON users.Id_users = eventz.Id_user WHERE eventz.Event_approval=1", callback);  // JOIN users ON users.Id_users = eventz.
+        return db.query("SELECT * FROM eventz WHERE eventz.Event_approval=1", callback);  // JOIN users ON users.Id_users = eventz.
     },  
     getEventsById: function(id, callback) {  
         return db.query("SELECT * FROM eventz WHERE eventz.Event_approval = 1 AND eventz.Id_event=?", [id], callback);  // JOIN users ON users.Id_users = eventz.Id_user eventz
