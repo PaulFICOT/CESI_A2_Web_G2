@@ -38,6 +38,8 @@ Route::view('/cgv', 'cgv');
 
     /* Envoie de l'idée proposée */
 Route::get('/ideabox', 'IdeaboxController@formulaire');
+    /* Traitement des données */
+Route::post('/ideabox', 'IdeaboxController@addIdea');
 
     /* Traitement des données */
 Route::get('/evenements', 'EventsController@formulaire');

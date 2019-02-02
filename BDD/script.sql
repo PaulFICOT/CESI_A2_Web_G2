@@ -137,10 +137,11 @@ CREATE TABLE Containz (
 #------------------------------------------------------------
 
 CREATE TABLE Comments (
+	Id_comment INT AUTO_INCREMENT NOT NULL,
     Id_user INT NOT NULL,
     Id_photo INT NOT NULL,
     Comment_content VARCHAR(255) NOT NULL,
-    CONSTRAINT Comments_PK PRIMARY KEY (Id_user , Id_photo),
+    CONSTRAINT Comments_PK PRIMARY KEY (Id_comment),
     CONSTRAINT Comments_Users_FK FOREIGN KEY (Id_user)
         REFERENCES Users (Id_user),
     CONSTRAINT Comments_Photos0_FK FOREIGN KEY (Id_photo)

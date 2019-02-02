@@ -8,30 +8,53 @@
     <div class="containt">
       <div class="container">
         <div class="wrap">
-
           <div class="toCenter text-cesiBlue">
             <h2 class="heavy-bottom">Boîte à idées</h2>
-
 
           <!--Formulaire Boite à idées-->
           <div class="toCenter">
             <div class="pad shadow selected">
-                <form action="" id="contact-form" method="post" class="wide center" data-ajax-form="true">
+                <form method="post" action="/ideabox" id="contact-form" class="wide center" data-ajax-form="true">
                     <h3 id="ResponseContact-popUp" class="text-cesiBlue heavy-bottom">Proposez-nous vos évènements !</h3>
-                    <div class="label cropTop"><label class="cropTop text-cesiBlue" for="name55">Nom de Famille</label></div>
+                    <div class="label cropTop">
+
+                    @csrf
+
+                    <label class="cropTop text-cesiBlue" for="name55">Prénom</label>
+                    </div>
                     <input class="stroke wide" id="name55" type="name" name="FirstName" placeholder="Nom" required />
-                    <div class="label cropTop"><label class="cropTop text-cesiBlue" for="name55">Prénom</label></div>
+                    <div class="label cropTop">
+
+                    <label class="cropTop text-cesiBlue" for="name55">Nom de Famille</label>
+                    </div>
                     <input class="stroke wide" id="name55" type="name" name="Name" placeholder="Prénom" required />
-                    <div class="label "><label class="text-cesiBlue" for="email55">Adresse Email</label></div>
+                    <div class="label ">
+
+                      <label class="text-cesiBlue" for="email55">Adresse Email</label>
+                    </div>
                     <input class="stroke  wide" id="email55" type="email" name="Email" placeholder="Email" required />
-                    <div class="label "><label class="text-cesiBlue" for="text55">Titre de l'évènement</label></div>
-                    <input class="stroke wide" id="name55" type="text" name="Text" placeholder="Titre" required />
-                    <div class="label cropTop"><label class="cropTop text-cesiBlue" for="name55">Localisation</label></div>
-                    <input class="stroke wide" id="name55" type="text" name="Text" placeholder="Localisation de l'évènement"/>
-                    <div class="label cropTop"><label class="cropTop text-cesiBlue" for="name55">Tarif</label></div>
-                    <input class="stroke wide" id="name55" type="text" name="Text" placeholder="Tarif"/>
-                    <div class="label"><label class="text-cesiBlue" for="text55">Description</label></div>
-                    <textarea class="left" id="message55" type="text" name="Body" placeholder="Description de l'évènement" required></textarea>
+                    <div class="label ">
+
+                      <label class="text-cesiBlue" for="text55">Titre de l'évènement</label>
+                    </div>
+                    <input class="stroke wide" id="name55" type="text" name="Title" placeholder="Titre" required />
+                    <div class="label cropTop">
+
+                      <label class="cropTop text-cesiBlue" for="name55">Localisation</label>
+                    </div>
+                    <input class="stroke wide" id="name55" type="text" name="Location" placeholder="Localisation de l'évènement"/>
+                    <div class="label cropTop">
+
+                      <label class="cropTop text-cesiBlue" for="name55">Tarif</label>
+                    </div>
+                    <input class="stroke wide" id="name55" type="text" name="Cost" placeholder="Tarif"/>
+                    <div class="label">
+
+                      <label class="text-cesiBlue" for="text55">Description</label>
+                    </div>
+                    <textarea class="left" id="message55" type="text" name="Body" placeholder="Description de l'évènement" required>
+                    </textarea>
+                    
                     <input class="button cesiBlue round btn margin-top-2 cropBottom" type="submit" name="submit-Contact" value="Envoyer le message" data-success-text="Envoyé !" data-success-class="green" />
                 </form>
             </div>

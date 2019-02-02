@@ -11,7 +11,17 @@ class users extends model implements Authenticatable
     
     use BasicAuthenticatable;
     
-    protected $fillable = ['User_mail','User_firstname','User_lastname','password'];
+    public $timestamps = false;
+    protected $fillable = [
+        'User_mail',
+        'User_firstname',
+        'User_lastname',
+        'password',
+        'User_status',
+        'User_isAdmin',
+        'Id_center',
+    ];
+    protected $primaryKey = 'Id_user';
 
     /**
      * Get the password for the user.
