@@ -13,7 +13,17 @@ class IdeaboxController extends Controller
 
     public function addIdea()
     {
-        $idea = new App\addIdea;
+
+        request()->validate([
+            'Event_title' => [],
+            'Event_description' => [],
+            '' => [],
+            '' => [],
+            '' => [],
+            '' => [],
+            '' => [],
+        ]);
+        /*$idea = new App\idea;
         $idea->FirstName = request('FirstName');
         $idea->Name = request('Name');
         $idea->Email = request('Email');
@@ -22,7 +32,7 @@ class IdeaboxController extends Controller
         $idea->Cost = request('Cost');
         $idea->Body = request('Body');
 
-        $utilisateur->save();
+        $utilisateur->save();*/
         
     }
 }

@@ -59,7 +59,7 @@
                 </form>
             </div>
           </div>
-
+          
           <h4 class="heavy-strong">Vous pouvez retrouver ici tous les évènements BDE proposés par les étudiants !</h4>
           </div>
           <div class="grid">
