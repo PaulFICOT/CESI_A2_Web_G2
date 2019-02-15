@@ -35,6 +35,7 @@ class InscriptionController extends Controller
                     'password' => bcrypt(request('password')), /*bcryptjs*/
                     'Id_center' => request('Location'),
                     ]);
+                    
                 return 'Vous vous êtes bien inscrit';
         }
 }
