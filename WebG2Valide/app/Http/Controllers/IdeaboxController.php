@@ -43,4 +43,3 @@ class IdeaboxController extends Controller
         
         return flash("Vous devez être connecté pour voir cette page.");
     }
-}
